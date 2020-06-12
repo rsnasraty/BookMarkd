@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState } from "react"
 import { Jumbotron, Container, Row, Col, Button, InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 
 const Login = (props) => {
+    const [credentials, setCredentials] = useState({ email: "", password: "" });
+
+    const handleFieldChange = (evt) => {
+        const stateToChange = { ...credentials };
+        stateToChange[evt.target.id] = evt.target.value;
+        setCredentials(stateToChange);
+      };
+
+      const handleLogin = (e) => {
+        e.preventDefault();
+
+        props.setUser(credentials)
+        props.history.push("/Welcome");
+      }
+
   return (
-    <div>
+ 
     <Container>
     <Row>
     <Col>
@@ -30,8 +45,8 @@ const Login = (props) => {
       </Col>
       </Row>
       </Container>
-      
-    </div>
+    
+
   );
 };
 

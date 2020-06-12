@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "read@books.com",
+      "userName": "booknook",
+      "password": "word123"
+    }
+  ],
+
+  "readingMaterial": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Lalalala",
+      "authorName": "Mrs.Book Writer",
+      "readTypeId": 2,
+      "imageUrl": "google.com",
+      "link": "google.com",
+      "notes": "The book is fire"
+    }
+  ],
+  "readType": [
+    {
+      "id": 1,
+      "name": "Fanfiction"
+    },
+    {
+      "id": 2,
+      "name": "Article"
+    },
+    {
+      "id": 3,
+      "name": "Blog"
+    },
+    {
+      "id": 4,
+      "name": "Novel"
+    }
+  ],
+  "Statuses": [
+    {
+      "id": 1,
+      "status": "In-Progress"
+    },
+    {
+      "id": 2,
+      "name": "Complete"
+    },
+    {
+      "id": 3,
+      "name": "Marked For Later"
+    }
+  ]
+}

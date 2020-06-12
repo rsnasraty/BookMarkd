@@ -24,13 +24,11 @@ const NavBar = (props) => {
     <div>
     <header>
      <h1 className="site-title">
-       Houchens
-        <br />
-        <small>Candy Y'all</small>
+     
       </h1>
       </header>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Kandy Korner</NavbarBrand>
+        <NavbarBrand href="/">BookMarkd</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

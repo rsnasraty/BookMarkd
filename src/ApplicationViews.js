@@ -1,7 +1,7 @@
 import Login from "./auth/Login.js"
-import { Route} from "react-router-dom";
+import { Route, Redirect} from "react-router-dom";
 import React from "react";
-import Home from "./auth/Home.js"
+import BookMark from "./BookMark"
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
@@ -27,9 +27,12 @@ const ApplicationViews = props => {
 
 <Route
         exact
-        path="/home"
-        render={props => {
-          return <Home />;
+        path="/BookMark"
+        render={props => { if (hasUser) {
+            return <BookMark {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
 

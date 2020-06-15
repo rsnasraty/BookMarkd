@@ -7,10 +7,8 @@
     margin-right: .02em;
     margin-left: .02em;
     flex-basis: auto;
-  }
-  
-  .card-content {
     padding: .5em;
+    height: 100%; 
+    width: auto;
   }
   
- 

@@ -3,6 +3,7 @@ import { Route, Redirect} from "react-router-dom";
 import React from "react";
 import BookMark from "./BookMark"
 import UserForm from "./auth/UserForm"
+import Home from "./components/Home"
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
@@ -10,11 +11,11 @@ const ApplicationViews = props => {
 
   return (
     <React.Fragment>
-      <Route
+     <Route
         exact
-        path="/BookMark"
+        path="/"
         render={props => {
-          return <Login />;
+          return <Home />;
         }}
       />
 

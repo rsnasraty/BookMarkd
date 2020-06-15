@@ -33,7 +33,7 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-            <NavLink href="/">Home</NavLink>
+            <NavLink href="/BookMark">Home</NavLink>
             </NavItem>
             <NavItem>
             <NavLink href="/login">Login</NavLink>
@@ -41,19 +41,19 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/products">Products</NavLink>
+            <NavLink href="/newReads">New Reads</NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/employees">Employees</NavLink>
+            <NavLink href="/markedForLater">Marked For Later</NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/locations">Locations</NavLink>
+            <NavLink href="/inProgress">In Progress</NavLink>
             </NavItem>
             : null}
             {props.hasUser 

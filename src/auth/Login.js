@@ -1,5 +1,5 @@
 import React, { useState} from "react"
-import { Jumbotron, Container, Form, InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import { Button, Jumbotron, Container, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Login = props => {
     const [credentials, setCredentials] = useState({ username: "", password: "" });
@@ -14,37 +14,29 @@ const Login = props => {
         e.preventDefault();
 
         props.setUser(credentials)
-        props.history.push("/Home");
-      }
+        props.history.push("/");
+       }
 
   return (
- 
-    <Form onSubmit={handleLogin}>
-    
+ <div>
     <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">BookMark'd</h1>
           <p className="lead">This is a placefiller for the app logo</p>
         </Container>
       </Jumbotron>
-      <InputGroup onChange={handleFieldChange}  type="username"
-            id="username" size="lg">
-        <InputGroupAddon  addonType="prepend">
-          <InputGroupText>Username</InputGroupText>
-        </InputGroupAddon>
-        <Input placeholder="username" />
-      </InputGroup>
-      <InputGroup onChange={handleFieldChange} type="password"
-            id="password"  size="lg">
-      <InputGroupAddon addonType="prepend">
-          <InputGroupText>Password</InputGroupText>
-        </InputGroupAddon>
-        <Input placeholder="password" />
-      </InputGroup>
-      <br />
-      <button type="submit">Submit </button>
+<Form onSubmit={handleLogin}>
+<FormGroup>
+<Label for="exampleEmail">Email</Label>
+        <Input onChange={handleFieldChange} type="email" name="email" id="exampleEmail" placeholder="mark@book.com" />
+      </FormGroup>
+      <FormGroup>
+        <Label for="examplePassword">Password</Label>
+        <Input onChange={handleFieldChange} type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+      </FormGroup>
+      <Button>Submit</Button>
     </Form>
-
+</div>
   );
 };
 

@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { Jumbotron, Container, Row, Col, Button, InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import React, { useState} from "react"
+import { Jumbotron, Container, Form, InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 
-const Login = (props) => {
-    const [credentials, setCredentials] = useState({ email: "", password: "" });
+const Login = props => {
+    const [credentials, setCredentials] = useState({ username: "", password: "" });
 
     const handleFieldChange = (evt) => {
         const stateToChange = { ...credentials };
@@ -14,38 +14,36 @@ const Login = (props) => {
         e.preventDefault();
 
         props.setUser(credentials)
-        props.history.push("/Welcome");
+        props.history.push("/Home");
       }
 
   return (
  
-    <Container>
-    <Row>
-    <Col>
+    <Form onSubmit={handleLogin}>
+    
     <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">BookMark'd</h1>
           <p className="lead">This is a placefiller for the app logo</p>
         </Container>
       </Jumbotron>
-      <InputGroup size="lg">
-        <InputGroupAddon addonType="prepend">
+      <InputGroup onChange={handleFieldChange}  type="username"
+            id="username" size="lg">
+        <InputGroupAddon  addonType="prepend">
           <InputGroupText>Username</InputGroupText>
         </InputGroupAddon>
         <Input placeholder="username" />
       </InputGroup>
-      <InputGroup size="lg">
+      <InputGroup onChange={handleFieldChange} type="password"
+            id="password"  size="lg">
       <InputGroupAddon addonType="prepend">
           <InputGroupText>Password</InputGroupText>
         </InputGroupAddon>
         <Input placeholder="password" />
       </InputGroup>
       <br />
-      <Button color="secondary" size="mg">Submit</Button>
-      </Col>
-      </Row>
-      </Container>
-    
+      <button type="submit">Submit </button>
+    </Form>
 
   );
 };

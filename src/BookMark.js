@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import NavBar from "./nav/NavBar";
 import ApplicationViews from "./ApplicationViews.js"
 
-
+//need to introduce conditional rendering 
 
 const BookMark = () => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   const [hasUser, setHasUser] = useState(isAuthenticated());
+
 
   const setUser = user => {
     sessionStorage.setItem("credentials", JSON.stringify(user));

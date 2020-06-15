@@ -16,8 +16,8 @@ const Home = (props) => {
           <CardTitle>Card title</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
         </CardBody>
-        <Link to="src/Completed/AddNew/AddNewCard.js">
-  <img src="/images/book.svg" max-width="50%" className="addNew" />
+        <Link to="src/AddNew/AddNewCard.js">
+  <img src="/images/notepad.svg" max-width="50%" className="addNew" alt="Notepad" />
 </Link>
         <CardBody>
           <CardLink href="#">Card Link</CardLink>
@@ -25,12 +25,14 @@ const Home = (props) => {
         </CardBody>
       </Card>
      {/*  /* //card 2// */ }
-      <Card className="home_cards">
+     <Card className="home_cards">
         <CardBody>
           <CardTitle>Card title</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
         </CardBody>
-        <img max-width="50%" src="/images/bookmark.svg" alt="Card image cap" />
+        <Link to="src/inProgress/InProgressCard.js">
+  <img src="/images/inprogress.svg" max-width="50%" className="inProgress" alt="Open Book" />
+</Link>
         <CardBody>
           <CardLink href="#">Card Link</CardLink>
           <CardLink href="#">Another Link</CardLink>
@@ -39,13 +41,15 @@ const Home = (props) => {
 </Row>
 
 {/* //card 3 */}
-<Row>
-      <Card className="home_cards">
+<Row> 
+  <Card className="home_cards">
         <CardBody>
           <CardTitle>Card title</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
         </CardBody>
-        <img max-width="50%" src="/images/completedbooks.svg" alt="Card image cap" />
+        <Link to="src/markedForLater/MarkedForLaterCard.js">
+  <img src="/images/bookmark.svg" max-width="50%" className="MFLater" alt="Book mark" />
+</Link>
         <CardBody>
           <CardLink href="#">Card Link</CardLink>
           <CardLink href="#">Another Link</CardLink>
@@ -58,7 +62,9 @@ const Home = (props) => {
           <CardTitle>Card title</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
         </CardBody>
-        <img max-width="50%" src="/images/inprogress.svg" alt="Card image cap" />
+        <Link to="src/Completed/CompletedCard.js">
+  <img src="/images/completedbooks.svg" max-width="50%" className="Completed" alt="Stack of books" />
+</Link>
         <CardBody>
           <CardLink href="#">Card Link</CardLink>
           <CardLink href="#">Another Link</CardLink>

@@ -3,7 +3,6 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    background: rgb(246, 241, 247);
     margin-bottom: .02em;
     margin-right: .02em;
     margin-left: .02em;
@@ -14,15 +13,4 @@
     padding: .5em;
   }
   
-  .card-content h3 {
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-weight: bold;
-    color: rgb(43, 112, 241);
-  }
-  
-  .card-content p {
-    font-size: 80%;
-    color: darkslategrey;
-  }
-  
+ 

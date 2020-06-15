@@ -1,8 +1,9 @@
 import React from 'react';
 import {
   Card, CardBody, CardLink,
-  CardTitle, CardSubtitle, Container, Row, Col
+  CardTitle, CardSubtitle, Container, Row
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 import "./Home.css"
 
 const Home = (props) => {
@@ -15,7 +16,9 @@ const Home = (props) => {
           <CardTitle>Card title</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
         </CardBody>
-        <img max-width="50%" src="/images/book.svg" alt="Card image cap" />
+        <Link to="src/Completed/AddNew/AddNewCard.js">
+  <img src="/images/book.svg" max-width="50%" className="addNew" />
+</Link>
         <CardBody>
           <CardLink href="#">Card Link</CardLink>
           <CardLink href="#">Another Link</CardLink>

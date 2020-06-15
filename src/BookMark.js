@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./nav/NavBar";
 import ApplicationViews from "./ApplicationViews.js"
-import UserCard from "./auth/UserCard"
+
 
 
 const BookMark = () => {

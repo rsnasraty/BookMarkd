@@ -14,8 +14,8 @@ const Login = props => {
         e.preventDefault();
 
         props.setUser(credentials)
-        props.history.push("/Home");
-      }
+        props.history.push("/");
+       }
 
   return (
  
@@ -28,21 +28,21 @@ const Login = props => {
         </Container>
       </Jumbotron>
       <InputGroup onChange={handleFieldChange}  type="username"
-            id="username" size="lg">
+            id="username" required=""  autoFocus="" size="lg">
         <InputGroupAddon  addonType="prepend">
           <InputGroupText>Username</InputGroupText>
         </InputGroupAddon>
         <Input placeholder="username" />
       </InputGroup>
       <InputGroup onChange={handleFieldChange} type="password"
-            id="password"  size="lg">
+            id="password"  size="lg"  autoFocus="" required="" >
       <InputGroupAddon addonType="prepend">
           <InputGroupText>Password</InputGroupText>
         </InputGroupAddon>
         <Input placeholder="password" />
       </InputGroup>
       <br />
-      <button type="submit">Submit </button>
+      <button type="submit">Submit</button>
     </Form>
 
   );

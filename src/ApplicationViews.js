@@ -1,8 +1,6 @@
 import Login from "./auth/Login.js"
 import { Route, Redirect} from "react-router-dom";
 import React from "react";
-import BookMark from "./BookMark"
-import UserForm from "./auth/UserForm"
 import Home from "./components/Home"
 
 const ApplicationViews = props => {
@@ -11,14 +9,6 @@ const ApplicationViews = props => {
 
   return (
     <React.Fragment>
-     <Route
-        exact
-        path="/"
-        render={props => {
-          return <Home />;
-        }}
-      />
-
 
 <Route
         path="/login"
@@ -29,21 +19,19 @@ const ApplicationViews = props => {
 
 <Route
         exact
-        path="/BookMark"
-        render={props => { if (hasUser) {
-            return <BookMark {...props} />;
+        path="/login"
+        render={props => {
+          if (hasUser) {
+            return <Home {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
         }}
       />
 
-<Route
-        path="/users/new"
-        render={props => {
-          return <UserForm {...props} />;
-        }}
-      />
+
+
+
 
 
 

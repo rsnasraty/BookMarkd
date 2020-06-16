@@ -3,7 +3,8 @@ import { Route, Redirect} from "react-router-dom";
 import React from "react";
 import Home from "./components/Home"
 import RegisterCard from "./auth/RegisterCard"
-/* import UserCard from "./auth/UserCard" */
+import addNewReadForm from "./newReads/addNewReadForm"
+
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
@@ -39,6 +40,20 @@ const ApplicationViews = props => {
           return <RegisterCard {...props} />;
         }}
       />
+
+
+<Route
+        exact
+        path="/addNewReadForm"
+        render={props => { if (hasUser) {
+            return <addNewReadForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+
+
 
 
 {/* 

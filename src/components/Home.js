@@ -1,14 +1,14 @@
 import React from "react";
 import { Card, CardBody, CardLink, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-import "./Home.css";
+import "./Home.css"; 
 
 const Home = props => {
   return (
     <Container>
       <Row>
         <Card className="home_cards">
-          <Link to="src/AddNew/AddNewCard.js">
+          <Link to="src/newReads/addNewReadForm.js">
             <img src="/images/notepad.svg" className="addNew" alt="Notepad" />
           </Link>
           <CardBody>

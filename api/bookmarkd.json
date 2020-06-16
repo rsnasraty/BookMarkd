@@ -3,11 +3,22 @@
     {
       "id": 1,
       "email": "read@books.com",
-      "userName": "booknook",
+      "username": "booknook",
       "password": "word123"
+    },
+    {
+      "id": 2,
+      "email": "words@meanthings.com",
+      "username": "crissle",
+      "password": "theread"
+    },
+    {
+      "email": "cat@cat.com",
+      "username": "cat",
+      "password": "cat",
+      "id": 3
     }
   ],
-
   "readingMaterial": [
     {
       "id": 1,

@@ -1,5 +1,5 @@
 import React, { useState} from "react"
-import { Button, Jumbotron, Container, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Jumbotron, Container, Form, FormGroup, Label, Input, NavLink} from 'reactstrap';
 
 const Login = props => {
     const [credentials, setCredentials] = useState({ username: "", password: "" });
@@ -27,14 +27,15 @@ const Login = props => {
       </Jumbotron>
 <Form onSubmit={handleLogin}>
 <FormGroup>
-<Label for="exampleEmail">Email</Label>
-        <Input onChange={handleFieldChange} type="email" name="email" id="exampleEmail" placeholder="mark@book.com" />
+<Label for="email">Email</Label>
+        <Input onChange={handleFieldChange} type="email" name="email" id="email" placeholder="mark@book.com" />
       </FormGroup>
       <FormGroup>
-        <Label for="examplePassword">Password</Label>
-        <Input onChange={handleFieldChange} type="password" name="password" id="examplePassword" placeholder="password" />
+        <Label for="Password">Password</Label>
+        <Input onChange={handleFieldChange} type="password" name="password" id="Password" placeholder="password" />
       </FormGroup>
       <Button outline color="primary">Submit</Button>{' '}
+      <NavLink href="/Register">New User? Register Here</NavLink>
     </Form>
 </div>
   );

@@ -2,6 +2,7 @@ import Login from "./auth/Login.js"
 import { Route, Redirect} from "react-router-dom";
 import React from "react";
 import Home from "./components/Home"
+import UserCard from "./auth/UserCard"
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
@@ -29,6 +30,14 @@ const ApplicationViews = props => {
           return <Login setUser={setUser} {...props} />;
         }}
       />
+
+
+
+
+<Route path="/users" render={(props) => {
+      return <UserCard />
+    }} />
+
 
 {/* <Route
         exact

@@ -33,7 +33,7 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             {!props.hasUser
-            //if you don't have a user, show login ! 
+            //bang ternary statement here states that if you DONT have a User then you will show them login. If you DO have a user, show "null" aka nothing
             ?
             <NavItem>
             <NavLink href="/login">Login</NavLink>

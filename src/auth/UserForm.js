@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import UserManager from "../modules/UserManager"
 
 const UserForm = props => {
-  const [user, setUser] = useState({ username: "", password: "", email: ""});
+  const [user, setUser] = useState({ email: "", password: ""});
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
@@ -30,15 +30,17 @@ const UserForm = props => {
       <form>
         <fieldset>
           <div className="formgrid">
-            <input
-              type="text"
+
+          <label htmlFor="email">Email</label>
+          <input
+              type="email"
               required
               onChange={handleFieldChange}
-              id="name"
-              placeholder="User name"
+              id="email"
+              placeholder="Email"
             />
-            <label htmlFor="username">Username</label>
-
+           
+           <label htmlFor="password">Password</label>
             <input
               type="password"
               required
@@ -46,18 +48,7 @@ const UserForm = props => {
               id="password"
               placeholder="Password"
             />
-            <label htmlFor="password">Password</label>
-
-            <input
-              type="email"
-              required
-              onChange={handleFieldChange}
-              id="email"
-              placeholder="Email"
-            />
-            <label htmlFor="email">Email</label>
-
-
+            
           </div>
           <div className="alignRight">
             <button

@@ -2,7 +2,7 @@ import Login from "./auth/Login.js"
 import { Route, Redirect} from "react-router-dom";
 import React from "react";
 import Home from "./components/Home"
-import UserForm from "./auth/UserForm"
+import UserCard from "./auth/UserCard"
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;
@@ -31,12 +31,7 @@ const ApplicationViews = props => {
         }}
       />
 
-<Route
-        path="/users/new"
-        render={props => {
-          return <UserForm {...props} />;
-        }}
-      />
+
 
 
 <Route path="/users" render={(props) => {

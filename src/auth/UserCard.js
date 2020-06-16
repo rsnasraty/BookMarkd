@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import UserManager from '../../modules/UserManager';
+import UserManager from "../modules/UserManager"
+import Login from "../auth/Login"
 
 const UserCard = () => {
     const [users,setUsers]= useState([]);

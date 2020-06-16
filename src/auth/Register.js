@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import UserManager from '../../modules/UserManager';
 import './UserForm.css'
 
-const UserCard = props => {
+const Register = props => {
   const [user, setUser] = useState({ name: "", color: "" });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -104,6 +104,6 @@ export default UserForm
     </>
   );
 };
-export default UserCard
+export default Register
 
 

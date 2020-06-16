@@ -39,6 +39,9 @@ const ApplicationViews = props => {
       />
 
 
+<Route path="/users" render={(props) => {
+      return <UserCard />
+    }} />
 
 
 {/* <Route

@@ -48,7 +48,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/addNewReadForm">New Reads</NavLink>
+            <NavLink href="/AddNewReadForm">New Reads</NavLink>
             </NavItem>
             : null}
             {props.hasUser

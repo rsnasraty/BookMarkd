@@ -1,40 +1,43 @@
 import React, { useState } from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input} from "reactstrap";
+import ReadManager from "../modules/ReadManager";
 
-const addNewReadForm = props => {
- const [readingMaterials, setReadingMaterials] = useState({
-     title: "",
+const AddNewReadForm = props => {
+  const [read, setReads] = useState({ title: "",
     authorName: "",
     readTypeId: "",
     link: "",
-    notes: "" 
-  }); 
+    notes: ""});
+  const [isLoading, setIsLoading] = useState(false);
 
-  //sets RM state and then function to update it
 
   const handleFieldChange = evt => {
-    const stateToChange = { ...readingMaterials };
+    const stateToChange = { ...read };
     stateToChange[evt.target.id] = evt.target.value;
-    setReadingMaterials(stateToChange);
+    setReads(stateToChange);
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-
-    props.setNewRead(readingMaterials);
-    props.history.push("/Home");
+  const constructNewRead = evt => {
+    evt.preventDefault();
+    if (read.title === "" || read.authorName === "" || read.readTypeId  === "" || read.link === "" || read.notes  === "") {
+      window.alert("Please complete all fields");
+    } else {
+      setIsLoading(true);
+      ReadManager.post(read)
+        .then(() => props.history.push("/Home"));
+    }
   };
-/* 
-  const today = new Date();
-  const day = today.getUTCDate(); */
+
+
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
+      <Form>
         <FormGroup>
           <Label for="title">Title</Label>
           <Input
-            onChange={handleFieldChange}
+            required
+        onChange={handleFieldChange} 
             type="text"
             name="title"
             id="title"
@@ -44,7 +47,8 @@ const addNewReadForm = props => {
         <FormGroup>
           <Label for="author">Author</Label>
           <Input
-            onChange={handleFieldChange}
+            required
+        onChange={handleFieldChange} 
             type="text"
             name="author"
             id="author"
@@ -54,7 +58,8 @@ const addNewReadForm = props => {
         <FormGroup>
           <Label for="date">Title</Label>
           <Input
-            onChange={handleFieldChange}
+            required
+        onChange={handleFieldChange} 
             type="text"
             name="title"
             id="title"
@@ -64,6 +69,8 @@ const addNewReadForm = props => {
         <FormGroup>
           <Label for="examplePassword">Password</Label>
           <Input
+          required
+        onChange={handleFieldChange} 
             type="password"
             name="password"
             id="examplePassword"
@@ -72,7 +79,8 @@ const addNewReadForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="exampleSelect">Select</Label>
-          <Input type="select" name="select" id="exampleSelect">
+          <Input required
+        onChange={handleFieldChange} type="select" name="select" id="exampleSelect">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -82,7 +90,8 @@ const addNewReadForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="exampleSelectMulti">Select Multiple</Label>
-          <Input
+          <Input required
+        onChange={handleFieldChange} 
             type="select"
             name="selectMulti"
             id="exampleSelectMulti"
@@ -97,20 +106,15 @@ const addNewReadForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="exampleText">Text Area</Label>
-          <Input type="textarea" name="text" id="exampleText" />
+          <Input required
+        onChange={handleFieldChange}  type="textarea" name="text" id="exampleText" />
         </FormGroup>
-        <FormGroup>
-          <Label for="exampleFile">File</Label>
-          <Input type="file" name="file" id="exampleFile" />
-          <FormText color="muted">
-            This is some placeholder block-level help text for the above input.
-            It's a bit lighter and easily wraps to a new line.
-          </FormText>
-        </FormGroup>
-        <Button>Submit</Button>
+       
+        <Button disabled={isLoading} onclick={constructNewRead}>Submit</Button>
       </Form>
     </>
   );
-};
+  };
 
-export default addNewReadForm;
+
+export default AddNewReadForm;

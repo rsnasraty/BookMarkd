@@ -56,61 +56,44 @@ const AddNewReadForm = props => {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="date">Title</Label>
+          <Label for="date">Date Added</Label>
           <Input
             required
         onChange={handleFieldChange} 
             type="text"
-            name="title"
-            id="title"
-            placeholder="Sailor Moon 1"
+            name="date"
+            id="date"
+            placeholder="June 16th 2020"
           />
         </FormGroup>
         <FormGroup>
-          <Label for="examplePassword">Password</Label>
+          <Label for="readTypeId">Type of Reading Material</Label>
+          <Input required
+        onChange={handleFieldChange} type="select" name="readTypeId" id="readTypeId">
+            <option>Fanfiction</option>
+            <option>Article</option>
+            <option>Blog</option>
+            <option>Novel</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="link">Link</Label>
           <Input
-          required
+            required
         onChange={handleFieldChange} 
-            type="password"
-            name="password"
-            id="examplePassword"
-            placeholder="password placeholder"
+            type="text"
+            name="link"
+            id="link"
+            placeholder="https://www.amazon.com/Sailor-Moon-1-Naoko-Takeuchi/dp/1935429744"
           />
         </FormGroup>
         <FormGroup>
-          <Label for="exampleSelect">Select</Label>
+          <Label for="notes">Notes</Label>
           <Input required
-        onChange={handleFieldChange} type="select" name="select" id="exampleSelect">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Input>
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleSelectMulti">Select Multiple</Label>
-          <Input required
-        onChange={handleFieldChange} 
-            type="select"
-            name="selectMulti"
-            id="exampleSelectMulti"
-            multiple
-          >
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Input>
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleText">Text Area</Label>
-          <Input required
-        onChange={handleFieldChange}  type="textarea" name="text" id="exampleText" />
+        onChange={handleFieldChange}  type="text" name="notes" id="notes" />
         </FormGroup>
        
-        <Button disabled={isLoading} onclick={constructNewRead}>Submit</Button>
+        <Button disabled={isLoading} onClick={constructNewRead}>Submit</Button>
       </Form>
     </>
   );

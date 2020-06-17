@@ -19,7 +19,7 @@ const AddNewReadForm = props => {
 
   const constructNewRead = evt => {
     evt.preventDefault();
-    if (read.title === "" || read.authorName === "" ||  read.readTypeId  === "" ||  read.addDate === "" || read.link === "" || read.notes  === "") {
+    if (read.title === "" || read.authorName === "" ||  read.readTypeId  === "" ||  read.addDate === "" || read.statusId === "" || read.link === "" || read.notes  === "") {
       window.alert("Please complete all fields");
     } else {
       setIsLoading(true);
@@ -74,6 +74,15 @@ const AddNewReadForm = props => {
             <option>Article</option>
             <option>Blog</option>
             <option>Novel</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="statusId">Status</Label>
+          <Input required
+        onChange={handleFieldChange} type="select" name="statusId" id="statusId">
+            <option>In-Progress</option>
+            <option>Complete</option>
+            <option>Marked For Later</option>
           </Input>
         </FormGroup>
         <FormGroup>

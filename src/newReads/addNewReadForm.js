@@ -19,7 +19,7 @@ const AddNewReadForm = props => {
 
   const constructNewRead = evt => {
     evt.preventDefault();
-    if (read.title === "" || read.authorName === "" || read.readTypeId  === "" || read.link === "" || read.notes  === "") {
+    if (read.title === "" || read.authorName === "" ||  read.readTypeId  === "" ||  read.addDate === "" || read.statusId === "" || read.link === "" || read.notes  === "") {
       window.alert("Please complete all fields");
     } else {
       setIsLoading(true);
@@ -62,8 +62,8 @@ const AddNewReadForm = props => {
         onChange={handleFieldChange} 
             type="text"
             name="date"
-            id="date"
-            placeholder="June 16th 2020"
+            id="addDate"
+            placeholder="06/17/2020"
           />
         </FormGroup>
         <FormGroup>
@@ -77,6 +77,15 @@ const AddNewReadForm = props => {
           </Input>
         </FormGroup>
         <FormGroup>
+          <Label for="statusId">Status</Label>
+          <Input required
+        onChange={handleFieldChange} type="select" name="statusId" id="statusId">
+            <option>In-Progress</option>
+            <option>Complete</option>
+            <option>Marked For Later</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
           <Label for="link">Link</Label>
           <Input
             required
@@ -84,7 +93,7 @@ const AddNewReadForm = props => {
             type="text"
             name="link"
             id="link"
-            placeholder="https://www.amazon.com/Sailor-Moon-1-Naoko-Takeuchi/dp/1935429744"
+            placeholder="www.sailormoon.com"
           />
         </FormGroup>
         <FormGroup>

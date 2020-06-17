@@ -26,6 +26,8 @@
       "title": "Lalalala",
       "authorName": "Mrs.Book Writer",
       "readTypeId": 2,
+      "statusId": 1,
+      "addDate": "06/10/2020",
       "link": "google.com",
       "notes": "The book is fire"
     }

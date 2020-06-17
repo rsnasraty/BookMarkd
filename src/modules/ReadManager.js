@@ -7,14 +7,15 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/readingMaterials`).then(result => result.json())
   },
-  post(newUser) {
+  post(newRead) {
     return fetch(`${remoteURL}/readingMaterials`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(newUser)
+      body: JSON.stringify(newRead)
     }).then(data => data.json())
+    //Posts new Read object to json
 },
   getWithReadingMaterials(id) {
     return fetch(`${remoteURL}/readingMaterials?userId=${id}`)

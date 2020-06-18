@@ -17,8 +17,8 @@ export default {
     }).then(data => data.json())
     //Posts new Read object to json
 },
-  getWithReadingMaterials(id) {
-    return fetch(`${remoteURL}/readingMaterials?userId=${id}`)
+  getWithRMandStatus(id) {
+    return fetch(`${remoteURL}/readingMaterials?userId=${id}&?statusId=${2}`)
             .then(result => result.json())
             //get specific users reading materials only
 }

@@ -104,7 +104,7 @@ const AddNewReadForm = props => {
         onChange={handleFieldChange}  type="text" name="notes" id="notes" />
         </FormGroup>
        
-        <Button disabled={isLoading} onClick={constructNewRead}>Submit</Button>
+        <Button disabled={isLoading} onClick={constructNewRead}outline color="primary">Submit</Button>{' '}
       </Form>
     </>
   );

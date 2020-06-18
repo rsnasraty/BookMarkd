@@ -8,7 +8,7 @@ const Home = props => {
     <Container>
       <Row>
         <Card className="home_cards">
-          <Link to="src/newReads/addNewReadForm.js">
+          <Link to="AddNewReadForm">
             <img src="/images/notepad.svg" className="addNew" alt="Notepad" />
           </Link>
           <CardBody>

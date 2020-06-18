@@ -5,6 +5,7 @@ import "./Home.css";
 
 const Home = props => {
   return (
+    <div>
     <Container>
       <Row>
         <Card className="home_cards">
@@ -69,6 +70,7 @@ const Home = props => {
         </Card>
       </Row>
     </Container>
+    </div>
   );
 };
 

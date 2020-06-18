@@ -18,7 +18,7 @@ export default {
     //Posts new Read object to json
 },
   getWithRMandStatus(id) {
-    return fetch(`${remoteURL}/readingMaterials?userId=${id}&?statusId=${2}`)
+    return fetch(`${remoteURL}/readingMaterials?userId=${id}&?statusId=2`)
             .then(result => result.json())
             //get specific users reading materials only
 }

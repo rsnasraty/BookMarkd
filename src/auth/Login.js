@@ -2,7 +2,7 @@ import React, { useState} from "react"
 import { Button, Jumbotron, Container, Form, FormGroup, Label, Input, NavLink} from 'reactstrap';
 
 const Login = props => {
-    const [credentials, setCredentials] = useState({ username: "", password: "" });
+    const [credentials, setCredentials] = useState({ email: "", password: "" });
 
     const handleFieldChange = (evt) => {
         const stateToChange = { ...credentials };

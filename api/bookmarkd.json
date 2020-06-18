@@ -25,8 +25,8 @@
       "userId": 1,
       "title": "Lalalala",
       "authorName": "Mrs.Book Writer",
-      "readTypeId": 2,
-      "statusId": 1,
+      "readTypeId": "Fanfiction",
+      "statusId": "In-Progress",
       "addDate": "06/10/2020",
       "link": "google.com",
       "notes": "The book is fire"
@@ -67,11 +67,11 @@
     },
     {
       "id": 2,
-      "name": "Complete"
+      "status": "Complete"
     },
     {
       "id": 3,
-      "name": "Marked For Later"
+      "status": "Marked For Later"
     }
   ]
 }

@@ -21,7 +21,7 @@ const AddNewReadForm = props => {
 
   const constructNewRead = evt => {
     evt.preventDefault();
-    if (read.title === "" || read.authorName === "" ||  read.readTypeId  === "" ||  read.addDate === "" || read.statusId === "" || read.link === "" || read.notes  === "") {
+    if (read.title === "" || read.authorName === "" ||  read.readTypeId  === "" ||   read.statusId === "" || read.addDate === "" || read.link === "" || read.notes  === "") {
       window.alert("Please complete all fields");
     } else {
       setIsLoading(true);
@@ -53,7 +53,7 @@ const AddNewReadForm = props => {
         onChange={handleFieldChange} 
             type="text"
             name="author"
-            id="author"
+            id="authorName"
             placeholder="Naoko Takeuchi"
           />
         </FormGroup>

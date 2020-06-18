@@ -6,6 +6,8 @@ const AddNewReadForm = props => {
   const [read, setReads] = useState({ title: "",
     authorName: "",
     readTypeId: "",
+    statusId:"", 
+    addDate: "",
     link: "",
     notes: ""});
   const [isLoading, setIsLoading] = useState(false);

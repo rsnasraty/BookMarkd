@@ -3,7 +3,9 @@ import { Button, Form, FormGroup, Label, Input} from "reactstrap";
 import ReadManager from "../modules/ReadManager";
 
 const AddNewReadForm = props => {
-  const [read, setReads] = useState({ title: "",
+  const [read, setReads] = useState({ 
+    userId: parseInt(sessionStorage.getItem("credentials")),
+    title: "",
     authorName: "",
     readTypeId: "",
     statusId:"", 
@@ -12,12 +14,13 @@ const AddNewReadForm = props => {
     notes: ""});
   const [isLoading, setIsLoading] = useState(false);
 
-
+//Handlefieldchange records the user input in the form, setReads function then inputs the updated read state object
   const handleFieldChange = evt => {
     const stateToChange = { ...read };
     stateToChange[evt.target.id] = evt.target.value;
     setReads(stateToChange);
   };
+
 
   const constructNewRead = evt => {
     evt.preventDefault();

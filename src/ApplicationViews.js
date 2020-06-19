@@ -29,7 +29,11 @@ const ApplicationViews = props => {
 <Route
         path="/login"
         render={props => {
-          return <Login setUser={setUser} {...props} />;
+          //renders login component and passes setUser down to login, login then has access to set user on its PROPS
+          //can pass anything into a component, then that child component will have access to that data on its props object
+          // line 35 executes a function called Login and passes in the arguments that then become a propety of the props object
+          return <Login setUser={setUser} {...props} 
+          />;
         }}
       />
 

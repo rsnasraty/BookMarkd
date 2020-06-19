@@ -4,14 +4,17 @@ import ApplicationViews from "./ApplicationViews.js"
 
 //need to introduce conditional rendering 
 
+//passes setUser to applicationviews, which then passes it down via props to login
+
+
 const BookMark = () => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   const [hasUser, setHasUser] = useState(isAuthenticated());
 
 
-  const setUser = user => {
-    sessionStorage.setItem("credentials", JSON.stringify(user));
+  const setUser = userId => {
+    sessionStorage.setItem("credentials", parseInt(userId));
     setHasUser(isAuthenticated());
   };
 

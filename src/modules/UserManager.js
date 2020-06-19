@@ -7,6 +7,11 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/users`).then(result => result.json())
   },
+  //Filters the users collection by the email property of the users in the database, makes sure it matches
+  getByEmail(email) {
+    return fetch(`${remoteURL}/users?email=${email}`).then(result => result.json())
+    //ex: users?email=${email}&statusId=${statusId} then get by would take both as arguments
+  },
   post(newUser) {
     return fetch(`${remoteURL}/users`, {
       method: "POST",

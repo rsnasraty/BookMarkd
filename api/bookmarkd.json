@@ -2,9 +2,9 @@
   "users": [
     {
       "id": 1,
-      "email": "read@books.com",
+      "email": "r@b.com",
       "username": "booknook",
-      "password": "word123"
+      "password": "word"
     },
     {
       "id": 2,
@@ -32,13 +32,14 @@
       "notes": "The book is fire"
     },
     {
-      "title": "dfsf",
-      "authorName": "sdsd",
+      "userId": 3,
+      "title": "a",
+      "authorName": "a",
       "readTypeId": "Blog",
-      "statusId": "Complete",
-      "addDate": "dsd",
-      "link": "sdsd",
-      "notes": "dsd",
+      "statusId": "Marked For Later",
+      "addDate": "a",
+      "link": "a",
+      "notes": "a",
       "id": 2
     }
   ],

@@ -1,17 +1,17 @@
-//I want to filter so users can see their in progress results
 import React, { useState, useEffect } from 'react'
-import ReadManager from "../modules/ReadManager"
+import EmployeeManager from '../../modules/EmployeeManager'
+import AnimalCard from '../animal/AnimalCard'
 
 const EmployeeWithAnimals = props => {
-  const [read, setReads] = useState({});
-  const [status, setStatus] = useState([]);
+  const [employee, setEmployee] = useState({});
+  const [reads, setReads] = useState([]);
 
   useEffect(() => {
     //got here now make call to get employee with animal
-    ReadManager.getWithRMandStatus(props.match.params.userId)
+    EmployeeManager.getWithReadingMaterials(props.match.params.userId)
       .then(APIResult => {
-        setReads(APIResult);
-        setStatus(APIResult.status);
+        setUser(APIResult);
+        setReads(APIResult.reads);
       });
   }, []);
 

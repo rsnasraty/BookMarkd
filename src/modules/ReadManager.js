@@ -17,11 +17,10 @@ export default {
     }).then(data => data.json())
     //Posts new Read object to json
 },
-  getWithRMandStatus(id) {
-    return fetch(`${remoteURL}/readingMaterials?userId=${id}&?statusId=2`)
-            .then(result => result.json())
-            //get specific users reading materials only
-}
+  getWithReadingMaterials(id) {
+      return fetch(`${remoteURL}/users/${id}?_embed=readingMaterials`)
+              .then(result => result.json())
+  }
 
 
 

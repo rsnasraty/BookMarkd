@@ -16,12 +16,7 @@ export default {
       body: JSON.stringify(newRead)
     }).then(data => data.json())
     //Posts new Read object to json
-},
-  getWithReadingMaterials(id) {
-      return fetch(`${remoteURL}/users/${id}?_embed=readingMaterials`)
-              .then(result => result.json())
-  }
-
+}
 
 
 

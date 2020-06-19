@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import EmployeeManager from '../../modules/EmployeeManager'
+import UserManager from "../modules/UserManager"
 import AnimalCard from '../animal/AnimalCard'
 
 const EmployeeWithAnimals = props => {
-  const [employee, setEmployee] = useState({});
+  const [user, setUser] = useState({});
   const [reads, setReads] = useState([]);
 
   useEffect(() => {
@@ -17,9 +17,9 @@ const EmployeeWithAnimals = props => {
 
   return (
     <div className="card">
-      <p>Employee: {employee.name}</p>
-      {animals.map(animal =>
-        <AnimalCard
+      <p>User: {user.username}</p>
+      {reads.map(read =>
+        <ReadCard
           key={animal.id}
           animal={animal}
           {...props}

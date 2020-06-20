@@ -1,32 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import UserManager from "../modules/UserManager"
-import AnimalCard from '../animal/AnimalCard'
+import { Button, Label, Input} from "reactstrap";
+import ReadManager from "../modules/ReadManager";
 
-const EmployeeWithAnimals = props => {
-  const [user, setUser] = useState({});
-  const [reads, setReads] = useState([]);
+const InProgressCard = props => {
+  const [reads, setReads] = useState({ readingMaterials: "", statusId: "" });;
 
-  useEffect(() => {
-    //got here now make call to get employee with animal
-    EmployeeManager.getWithReadingMaterials(props.match.params.userId)
-      .then(APIResult => {
-        setUser(APIResult);
-        setReads(APIResult.reads);
-      });
-  }, []);
+  const handleFieldChange = evt => {
+    const stateToChange = { ...credentials };
+    stateToChange[evt.target.id] = evt.target.value;
+    setReads(stateToChange);
+  };
 
-  return (
-    <div className="card">
-      <p>User: {user.username}</p>
-      {reads.map(read =>
-        <ReadCard
-          key={animal.id}
-          animal={animal}
-          {...props}
-        />
-      )}
-    </div>
-  );
-};
-
-export default EmployeeWithAnimals;
+}

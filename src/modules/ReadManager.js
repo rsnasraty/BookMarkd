@@ -16,6 +16,11 @@ export default {
       body: JSON.stringify(newRead)
     }).then(data => data.json())
     //Posts new Read object to json
+},
+getInProgress() {
+  return fetch(`${remoteURL}/readingMaterials?userId=${userId}&${"In-Progress"}=${"In-Progress"}`)
+  .then(result => result.json())
+  //ex: users?email=${email}&statusId=${statusId} then get by would take both as arguments
 }
 
 

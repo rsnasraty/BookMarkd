@@ -20,11 +20,4 @@ export default {
       },
       body: JSON.stringify(newUser)
     }).then(data => data.json())
-  },
-  getWithReadingMaterials(id) {
-    return fetch(`${remoteURL}/users/${id}?_embed=readingMaterials`)
-            .then(result => result.json())
-}
-
-
-}
+  }

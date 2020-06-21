@@ -23,6 +23,9 @@ export default {
   },
   getInProgress(userId) {
     return fetch(`${remoteURL}/readingMaterials?userId=${userId}&statusId=In-Progress`).then(result => result.json())
-    //ex: users?email=${email}&statusId=${statusId} then get by would take both as arguments
+  },
+  getMarkedFL(userId) {
+    return fetch(`${remoteURL}/readingMaterials?userId=${userId}&statusId=Marked For Later`).then(result => result.json())
+    
   }
 }

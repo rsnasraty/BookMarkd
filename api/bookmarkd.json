@@ -32,6 +32,17 @@
       "notes": "The book is fire"
     },
     {
+      "id": 2,
+      "userId": 1,
+      "title": "Zane is inZane",
+      "authorName": "Roxanne featuring Sophia",
+      "readTypeId": "Article",
+      "statusId": "In-Progress",
+      "addDate": "06/21/2020",
+      "link": "newyorktimes.com",
+      "notes": "Facts"
+    },
+    {
       "userId": 3,
       "title": "a",
       "authorName": "a",
@@ -40,7 +51,7 @@
       "addDate": "a",
       "link": "a",
       "notes": "a",
-      "id": 2
+      "id": 3
     }
   ],
   "readType": [

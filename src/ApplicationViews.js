@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import RegisterCard from "./auth/RegisterCard"
 import AddNewReadForm from "./newReads/AddNewReadForm"
 import InProgressList from "./inProgress/InProgressList"
+import MarkedForLaterList from "./markedForLater/MarkedForLaterList"
 
 
 const ApplicationViews = props => {
@@ -46,6 +47,13 @@ const ApplicationViews = props => {
         }}
       />
 
+<Route
+        path="/MarkedForLaterList"
+        render={props => {
+          return <MarkedForLaterList {...props} 
+          />;
+        }}
+      />
 
 
 

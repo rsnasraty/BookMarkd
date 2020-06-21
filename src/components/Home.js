@@ -20,7 +20,7 @@ const Home = props => {
 
         {/*  /* //card 2// */}
         <Card className="home_cards">
-          <Link to="src/inProgress/InProgressCard.js">
+          <Link to="InProgressList">
             <img
               src="/images/inprogress.svg"
               max-width="50%"
@@ -39,7 +39,7 @@ const Home = props => {
 
       <Row>
         <Card className="home_cards">
-          <Link to="src/markedForLater/MarkedForLaterCard.js">
+        <Link to="MarkedForLaterList">
             <img
               src="/images/bookmark.svg"
               max-width="50%"

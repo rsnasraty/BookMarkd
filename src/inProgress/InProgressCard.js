@@ -5,22 +5,20 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
-  CardImg
+  Button
 } from "reactstrap";
-import "./InProgressCard.css"; 
+
 
 const InProgressCard = props => {
   return (
-    <Card>
-      <CardBody>
-      <img src="/images/blue-open-book_icon-icons.com_49295.png" className="addNew" alt="Notepad" />
-        <CardTitle>{props.readObject.title}</CardTitle>
+      <Card body inverse color="info" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+        <CardTitle tag="h2">{props.readObject.title}</CardTitle>
         <CardSubtitle>{props.readObject.authorName}</CardSubtitle>
-        <CardText>...</CardText>
-        <Button>Button</Button>
-      </CardBody>
-    </Card>
+        <CardText>{props.readObject.readTypeId}</CardText>
+        <CardText>{props.readObject.addDate}</CardText>
+        <CardText>{props.readObject.link}</CardText>
+        <CardText tag="h4">{props.readObject.notes}</CardText>
+      </Card>
   );
 };
 

@@ -13,9 +13,11 @@ import UserManager from "../modules/UserManager";
 
 //Login is a function that takes all of the arguments passed into the component, the object contains all of the properties
 const Login = props => {
+  //creates credentials object w/email and pw key, it is an object because of the {key value pairings set to an empty string to start with}
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
   const handleFieldChange = evt => {
+    //gets a credentials object with an email/pw 
     const stateToChange = { ...credentials };
     stateToChange[evt.target.id] = evt.target.value;
     setCredentials(stateToChange);
@@ -24,19 +26,18 @@ const Login = props => {
   const handleLogin = e => {
     e.preventDefault();
     //Step 1: Call the UserManager function to get the ONE User that matches the email input
-    console.log(credentials)
     UserManager.getByEmail(credentials.email)
       //create an anonymous function () => {} to pass the data coming back from the promise back into .then
       //.then user gets back the entire User object of the User with the email that matches the user Input
       .then(user => {
         // Step 2: Check if we have a user at all
         // Step 3: Compare user objects pw to the credentials object pw typed into the login form
-        console.log(user);
         if (user[0].password === credentials.password) {
           //user[0]is us going inside the array to get the user
           //props object contains all the data from ApplicationViews passed down to Login
           props.setUser(user[0].id);
         } else {
+          window.alert("User not found, please register");
         }
       });
     // Step 4: Call setUser with the user from the database
@@ -53,9 +54,11 @@ const Login = props => {
         </Container>
       </Jumbotron>
       <Form onSubmit={handleLogin}>
+      {/* handleLogin function is what updates the form */}
         <FormGroup>
           <Label for="email">Email</Label>
           <Input
+          //handleFieldChange function is updating the state as user is typing into the form
             onChange={handleFieldChange}
             type="email"
             name="email"

@@ -4,6 +4,7 @@ import React from "react";
 import Home from "./components/Home"
 import RegisterCard from "./auth/RegisterCard"
 import AddNewReadForm from "./newReads/AddNewReadForm"
+import InProgressList from "./inProgress/InProgressList"
 
 
 const ApplicationViews = props => {
@@ -31,11 +32,24 @@ const ApplicationViews = props => {
         render={props => {
           //renders login component and passes setUser down to login, login then has access to set user on its PROPS
           //can pass anything into a component, then that child component will have access to that data on its props object
-          // line 35 executes a function called Login and passes in the arguments that then become a propety of the props object
+          // line 36 executes a function called Login and passes in the arguments that then become a property of the props object
           return <Login setUser={setUser} {...props} 
           />;
         }}
       />
+
+<Route
+        path="/InProgressList"
+        render={props => {
+          return <InProgressList {...props} 
+          />;
+        }}
+      />
+
+
+
+
+
 
 
 <Route

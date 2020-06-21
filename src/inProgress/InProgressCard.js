@@ -1,32 +1,31 @@
-import React, { useState, useEffect } from 'react'
-import UserManager from "../modules/UserManager"
-import AnimalCard from '../animal/AnimalCard'
+import React from "react";
+import {
+  Card,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  CardImg
+} from "reactstrap";
 
-const EmployeeWithAnimals = props => {
-  const [user, setUser] = useState({});
-  const [reads, setReads] = useState([]);
-
-  useEffect(() => {
-    //got here now make call to get employee with animal
-    EmployeeManager.getWithReadingMaterials(props.match.params.userId)
-      .then(APIResult => {
-        setUser(APIResult);
-        setReads(APIResult.reads);
-      });
-  }, []);
-
+const InProgressCard = props => {
   return (
-    <div className="card">
-      <p>User: {user.username}</p>
-      {reads.map(read =>
-        <ReadCard
-          key={animal.id}
-          animal={animal}
-          {...props}
-        />
-      )}
-    </div>
+    <Card>
+      <CardImg
+        top
+        width="25%"
+        src="/images/inprogress.svg"
+        alt="Card image cap"
+      />
+      <CardBody>
+        <CardTitle>{props.readObject.title}</CardTitle>
+        <CardSubtitle>{props.readObject.authorName}</CardSubtitle>
+        <CardText>...</CardText>
+        <Button>Button</Button>
+      </CardBody>
+    </Card>
   );
 };
 
-export default EmployeeWithAnimals;
+export default InProgressCard;

@@ -11,8 +11,7 @@ const BookMark = () => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   const [hasUser, setHasUser] = useState(isAuthenticated());
-
-
+//saves authenticated user's info into session storage so I can use it later
   const setUser = userId => {
     sessionStorage.setItem("credentials", parseInt(userId));
     setHasUser(isAuthenticated());

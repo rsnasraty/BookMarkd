@@ -8,17 +8,13 @@ import {
   Button,
   CardImg
 } from "reactstrap";
+import "./InProgressCard.css"; 
 
 const InProgressCard = props => {
   return (
     <Card>
-      <CardImg
-        top
-        width="25%"
-        src="/images/inprogress.svg"
-        alt="Card image cap"
-      />
       <CardBody>
+      <img src="/images/blue-open-book_icon-icons.com_49295.png" className="addNew" alt="Notepad" />
         <CardTitle>{props.readObject.title}</CardTitle>
         <CardSubtitle>{props.readObject.authorName}</CardSubtitle>
         <CardText>...</CardText>

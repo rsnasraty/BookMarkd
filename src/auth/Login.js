@@ -24,19 +24,18 @@ const Login = props => {
   const handleLogin = e => {
     e.preventDefault();
     //Step 1: Call the UserManager function to get the ONE User that matches the email input
-    console.log(credentials)
     UserManager.getByEmail(credentials.email)
       //create an anonymous function () => {} to pass the data coming back from the promise back into .then
       //.then user gets back the entire User object of the User with the email that matches the user Input
       .then(user => {
         // Step 2: Check if we have a user at all
         // Step 3: Compare user objects pw to the credentials object pw typed into the login form
-        console.log(user);
         if (user[0].password === credentials.password) {
           //user[0]is us going inside the array to get the user
           //props object contains all the data from ApplicationViews passed down to Login
           props.setUser(user[0].id);
         } else {
+          window.alert("User not found, please register");
         }
       });
     // Step 4: Call setUser with the user from the database

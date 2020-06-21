@@ -13,9 +13,11 @@ import UserManager from "../modules/UserManager";
 
 //Login is a function that takes all of the arguments passed into the component, the object contains all of the properties
 const Login = props => {
+  //creates credentials object w/email and pw key, it is an object because of the {key value pairings set to an empty string to start with}
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
   const handleFieldChange = evt => {
+    //gets a credentials object with an email/pw 
     const stateToChange = { ...credentials };
     stateToChange[evt.target.id] = evt.target.value;
     setCredentials(stateToChange);
@@ -52,9 +54,11 @@ const Login = props => {
         </Container>
       </Jumbotron>
       <Form onSubmit={handleLogin}>
+      {/* handleLogin function is what updates the form */}
         <FormGroup>
           <Label for="email">Email</Label>
           <Input
+          //handleFieldChange function is updating the state as user is typing into the form
             onChange={handleFieldChange}
             type="email"
             name="email"

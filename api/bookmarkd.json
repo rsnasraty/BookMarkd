@@ -43,14 +43,14 @@
       "notes": "Facts"
     },
     {
-      "userId": 3,
-      "title": "a",
-      "authorName": "a",
+      "userId": 1,
+      "title": "Luke and Leigha: No Relation",
+      "authorName": "Cohort 40",
       "readTypeId": "Blog",
       "statusId": "Marked For Later",
-      "addDate": "a",
-      "link": "a",
-      "notes": "a",
+      "addDate": "06/21/2020",
+      "link": "tmz.com",
+      "notes": "He met Taylor Swift, she plays ice hockey, where's the movie?",
       "id": 3
     }
   ],

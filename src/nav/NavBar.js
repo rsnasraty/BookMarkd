@@ -54,13 +54,13 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/markedForLater">Marked For Later</NavLink>
+            <NavLink href="/MarkedForLaterList">Marked For Later</NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/inProgress">In Progress</NavLink>
+            <NavLink href="/InProgressList">In Progress</NavLink>
             </NavItem>
             : null}
             {props.hasUser 

@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import NavBar from "./nav/NavBar";
-import ApplicationViews from "./ApplicationViews.js"
+import ApplicationViews from "./ApplicationViews.js";
 
-//need to introduce conditional rendering 
-
+//Top part of my app
 //passes setUser to applicationviews, which then passes it down via props to login
-
 
 const BookMark = () => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   const [hasUser, setHasUser] = useState(isAuthenticated());
-//saves authenticated user's info into session storage so I can use it later
+  //saves user's info into session storage
   const setUser = userId => {
     sessionStorage.setItem("credentials", parseInt(userId));
     setHasUser(isAuthenticated());
@@ -20,8 +18,7 @@ const BookMark = () => {
   const clearUser = () => {
     sessionStorage.clear();
     setHasUser(isAuthenticated());
-  }
-  
+  };
 
   return (
     <>

@@ -11,13 +11,13 @@ import {
 } from "reactstrap";
 import UserManager from "../modules/UserManager";
 
-//Login is a function that takes all of the arguments passed into the component, the object contains all of the properties
+//Login = a function. It takes all of the arguments passed into the component. The resulting object contains all of the properties.
 const Login = props => {
-  //creates credentials object w/email and pw key, it is an object because of the {key value pairings set to an empty string to start with}
+  //sets empty object when first setting state
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
   const handleFieldChange = evt => {
-    //gets a credentials object with an email/pw 
+    //creates credentials object that has an email and a pw key on reload
     const stateToChange = { ...credentials };
     stateToChange[evt.target.id] = evt.target.value;
     setCredentials(stateToChange);

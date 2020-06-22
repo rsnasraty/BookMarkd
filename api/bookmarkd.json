@@ -17,6 +17,13 @@
       "username": "cat",
       "password": "cat",
       "id": 3
+    },
+    {
+      "email": "",
+      "username": "",
+      "password": "ma",
+      "confirmPassword": "la",
+      "id": 4
     }
   ],
   "readingMaterials": [
@@ -64,7 +71,6 @@
       "notes": "Adam Driver Deserved Better",
       "id": 4
     }
-
   ],
   "readType": [
     {

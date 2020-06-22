@@ -6,6 +6,7 @@ import RegisterCard from "./auth/RegisterCard"
 import AddNewReadForm from "./newReads/AddNewReadForm"
 import InProgressList from "./inProgress/InProgressList"
 import MarkedForLaterList from "./markedForLater/MarkedForLaterList"
+import CompletedList from "./Completed/CompletedList"
 
 
 const ApplicationViews = props => {
@@ -55,7 +56,13 @@ const ApplicationViews = props => {
         }}
       />
 
-
+<Route
+        path="/CompletedList"
+        render={props => {
+          return <CompletedList {...props} 
+          />;
+        }}
+      />
 
 
 

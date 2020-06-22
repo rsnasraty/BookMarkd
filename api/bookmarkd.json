@@ -52,7 +52,19 @@
       "link": "tmz.com",
       "notes": "He met Taylor Swift, she plays ice hockey, where's the movie?",
       "id": 3
-    }
+    },
+    {
+      "userId": 1,
+      "title": "The Rise of Skywalker except not garbage. Also Ben Solo is the 'Skywalker' because duh.",
+      "authorName": "Rian Johnson",
+      "readTypeId": "Fanfiction",
+      "statusId": "Completed",
+      "addDate": "06/21/2020",
+      "link": "https://archiveofourown.org/",
+      "notes": "We kept the Reylo kiss though, thanks JJ Mystery Box Abrams",
+      "id": 4
+    },
+
   ],
   "readType": [
     {
@@ -79,7 +91,7 @@
     },
     {
       "id": 2,
-      "status": "Complete"
+      "status": "Completed"
     },
     {
       "id": 3,

@@ -55,7 +55,7 @@ const Home = props => {
 
         {/* //card 4 */}
         <Card className="home_cards">
-          <Link to="src/Completed/CompletedCard.js">
+          <Link to="CompletedList">
             <img
               src="/images/completedbooks.svg"
               max-width="50%"

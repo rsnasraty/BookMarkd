@@ -17,6 +17,20 @@
       "username": "cat",
       "password": "cat",
       "id": 3
+    },
+    {
+      "email": "meow@cat.com",
+      "username": "meow",
+      "password": "meow",
+      "confirmPassword": "meow",
+      "id": 5
+    },
+    {
+      "email": "cat@dog.com",
+      "username": "dog",
+      "password": "dog",
+      "confirmPassword": "dog",
+      "id": 6
     }
   ],
   "readingMaterials": [
@@ -64,7 +78,6 @@
       "notes": "Adam Driver Deserved Better",
       "id": 4
     }
-
   ],
   "readType": [
     {

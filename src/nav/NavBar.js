@@ -63,6 +63,12 @@ const NavBar = (props) => {
             <NavLink href="/InProgressList">In Progress</NavLink>
             </NavItem>
             : null}
+            {props.hasUser
+            ?
+            <NavItem>
+            <NavLink href="/CompletedList">Completed</NavLink>
+            </NavItem>
+            : null}
             {props.hasUser 
         ? <NavItem> <span className="nav-link" onClick={handleLogout}> Logout </span></NavItem> :null}
           </Nav>

@@ -13,6 +13,11 @@ const MarkedForLaterList = props => {
     });
   }, []);
 
+  const deleteMFLRead = id => {
+    UserManager.delete(id)
+      .then(() => UserManager.getAll().then(setMarkedRMs));
+  };
+
   return (
     <div>
       {/* passing props to IPCard so we can let it know what readObject is, need to tell it things so it knows what they mean on the card ex: delete. ...props lets you use props.history etc.  */}
@@ -20,6 +25,7 @@ const MarkedForLaterList = props => {
         <MarkedForLaterCard
           key={readObject.id}
           readObject={readObject}
+          deleteMFLRead={deleteMFLRead}
           {...props}
         />
       ))}

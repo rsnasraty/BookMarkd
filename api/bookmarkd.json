@@ -69,7 +69,7 @@
     },
     {
       "userId": 1,
-      "title": "The Rise of Skywalker except actually good. Also Ben Solo is the 'Skywalker' because Leia is his mom hello.",
+      "title": "The Rise of Skywalker: except good. Also Ben Solo is the 'Skywalker' because Leia is his mom hello.",
       "authorName": "Rian Johnson",
       "readTypeId": "Fanfiction",
       "statusId": "Completed",
@@ -77,6 +77,17 @@
       "link": "https://archiveofourown.org/",
       "notes": "Adam Driver Deserved Better",
       "id": 4
+    },
+    {
+      "userId": 1,
+      "title": "Reylo",
+      "authorName": "Rian Johnson",
+      "readTypeId": "Fanfiction",
+      "statusId": "Completed",
+      "addDate": "06/22/2020",
+      "link": "https://archiveofourown.org/",
+      "notes": "It's canon /kanyeshrug",
+      "id": 5
     }
   ],
   "readType": [

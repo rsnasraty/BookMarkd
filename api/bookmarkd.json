@@ -19,11 +19,18 @@
       "id": 3
     },
     {
-      "email": "",
-      "username": "",
-      "password": "ma",
-      "confirmPassword": "la",
-      "id": 4
+      "email": "meow@cat.com",
+      "username": "meow",
+      "password": "meow",
+      "confirmPassword": "meow",
+      "id": 5
+    },
+    {
+      "email": "cat@dog.com",
+      "username": "dog",
+      "password": "dog",
+      "confirmPassword": "dog",
+      "id": 6
     }
   ],
   "readingMaterials": [

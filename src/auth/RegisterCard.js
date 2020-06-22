@@ -21,8 +21,8 @@ const RegisterCard = props => {
    */
   const constructNewUser = evt => {
     evt.preventDefault();
-    if (user.email === "" || user.username === "" || user.password === "") {
-      window.alert("Please input your email, create a username, and password");
+    if (user.password !== user.confirmPassword) {
+      window.alert("Passwords must match");
     } else {
       setIsLoading(true);
       // Create the User and redirect user to Home

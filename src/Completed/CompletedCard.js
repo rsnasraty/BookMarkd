@@ -5,7 +5,7 @@ const CompletedCard = props => {
   return (
     <Card
       body
-      inverse
+      outline
       color="info"
       body
       inverse

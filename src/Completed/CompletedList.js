@@ -3,13 +3,14 @@ import UserManager from "../modules/UserManager";
 import ReadManager from "../modules/ReadManager"
 import CompletedCard from "./CompletedCard";
 
+
 //use props to pass in setUser from Login/AppViews
 const CompletedList = props => {
   const [completedRMs, setCompletedRMs] = useState([]);
+  const userId = sessionStorage.getItem("credentials");
 
 //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
-    const userId = sessionStorage.getItem("credentials");
     UserManager.getCompleted(userId).then(CompletedReads => {
       setCompletedRMs(CompletedReads);
     });
@@ -20,12 +21,13 @@ const CompletedList = props => {
   //deletes CR object
   const deleteCompletedRead = id => {
     ReadManager.delete(id)
-      .then(() => UserManager.getCompleted().then(setCompletedRMs));
+      .then(() => UserManager.getCompleted(userId).then(setCompletedRMs));
   };
 
   //Pass the deleteCompletedRead function to the child component (CCard)
   //This gives the child component the ability to invoke the function found on the parent (CList)
   //CC receives two props: r
+  //Completed Card utilizes this information in order to use buttons/paths
   return (
     <div>
       {completedRMs.map(readObject => (

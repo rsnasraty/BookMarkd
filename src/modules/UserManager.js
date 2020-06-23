@@ -39,7 +39,7 @@ export default {
     ).then(result => result.json());
   },
   update(editedCR) {
-    return fetch(`${remoteURL}/readingMaterials/${editedCompletedRead.id}&statusId=Completed`, {
+    return fetch(`${remoteURL}/readingMaterials/${editedCR.id}&statusId=Completed`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

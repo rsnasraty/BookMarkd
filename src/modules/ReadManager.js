@@ -16,6 +16,11 @@ export default {
       body: JSON.stringify(newRead)
     }).then(data => data.json())
     //Posts new Read object to json
+},
+delete(id) {
+  return fetch(`${remoteURL}/readingMaterials/${id}`, {
+    method: "DELETE"
+  }).then(result => result.json())
 }
 
 

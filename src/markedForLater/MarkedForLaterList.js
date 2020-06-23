@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import UserManager from "../modules/UserManager";
+import ReadManager from "../modules/ReadManager"
 import MarkedForLaterCard from "./MarkedForLaterCard";
 
 //use props to pass in setUser from Login/AppViews
 const MarkedForLaterList = props => {
   const [markedRMs, setMarkedRMs] = useState([]);
 
+  //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). 
+  //The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
     const userId = sessionStorage.getItem("credentials");
     UserManager.getMarkedFL(userId).then(MFLRMs => {
@@ -14,8 +17,8 @@ const MarkedForLaterList = props => {
   }, []);
 
   const deleteMFLRead = id => {
-    UserManager.delete(id)
-      .then(() => UserManager.getAll().then(setMarkedRMs));
+    ReadManager.delete(id)
+      .then(() => UserManager.getMarkedFL().then(setMarkedRMs));
   };
 
   return (

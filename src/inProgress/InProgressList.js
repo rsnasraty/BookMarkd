@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserManager from "../modules/UserManager";
+import ReadManager from "../modules/ReadManager"
 import InProgressCard from "./InProgressCard";
 
 //use props to pass in setUser from Login/AppViews
@@ -9,8 +10,7 @@ const InProgressList = props => {
   //1) Working on this to get logged in UserId
   //gets userId
 
-  //In state, I have an empty array named IPRM, then I am setting the array with what I get back from the IPReads fetch call
-  //Now the array will be filled with every object I get back from the fetch call
+  //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
     const userId = sessionStorage.getItem("credentials");
     UserManager.getInProgress(userId).then(IPReads => {
@@ -19,8 +19,8 @@ const InProgressList = props => {
   }, []);
 
   const deleteIPRead = id => {
-    UserManager.delete(id)
-      .then(() => UserManager.getAll().then(setIPRMs));
+    ReadManager.delete(id)
+      .then(() => UserManager.getInProgress().then(setIPRMs));
   };
 
   return (

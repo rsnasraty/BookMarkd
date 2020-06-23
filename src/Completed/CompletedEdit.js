@@ -28,7 +28,7 @@ const updateExistingCR = evt => {
     setIsLoading(true);
 
     const editedCR = {
-     id: props.match.params.completedReadId,
+     id: props.match.params.readingMaterialsId,
      authorName: completedRead.authorName,
      readTypeId: completedRead.readTypeId,
      statusId: completedRead.statusId,
@@ -37,13 +37,13 @@ const updateExistingCR = evt => {
      notes: completedRead.notes
         }
 
-ReadManager.update(completedRead)
+ReadManager.update(editedCR)
 .then(() => props.history.push("/CompletedList"));
 
 }
 
 useEffect(() => {
-    ReadManager.get(props.match.params.completedReadId)
+    ReadManager.get(props.match.params.readingMaterialsId)
       .then(completedRead => {
         setCompletedReads(completedRead);
         setIsLoading(false);

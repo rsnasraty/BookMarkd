@@ -54,7 +54,7 @@ const ApplicationViews = props => {
         }}
       />
 
-      <Route
+      <Route exact
         path="/CompletedList"
         render={props => {
           return <CompletedList {...props} />;
@@ -80,8 +80,9 @@ const ApplicationViews = props => {
         }}
       />
 
+{/* (\d+) means digit of any value, readingMaterialsId is a taco passed into CompletedEdit component */}
       <Route
-        path="/Completed/:readingMaterialsId(\d+)/edit"
+        path="/CompletedList/:readingMaterialsId(\d+)/edit"
         render={props => {
           if (hasUser) {
             return (

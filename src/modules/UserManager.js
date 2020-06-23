@@ -37,6 +37,15 @@ export default {
     return fetch(
       `${remoteURL}/readingMaterials?userId=${userId}&statusId=Completed`
     ).then(result => result.json());
+  },
+  update(editedCR) {
+    return fetch(`${remoteURL}/readingMaterials/${editedCompletedRead.id}&statusId=Completed`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedCR)
+    }).then(data => data.json());
   }
   
 };

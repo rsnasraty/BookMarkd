@@ -37,6 +37,7 @@ export default {
     return fetch(
       `${remoteURL}/readingMaterials?userId=${userId}&statusId=Completed`
     ).then(result => result.json());
-  }
+  },
+  
   
 };

@@ -42,7 +42,7 @@ const ApplicationViews = props => {
         }}
       />
 
-<Route
+<Route 
         path="/InProgressList"
         render={props => {
           return <InProgressList {...props} 
@@ -50,7 +50,7 @@ const ApplicationViews = props => {
         }}
       />
 
-<Route
+<Route 
         path="/MarkedForLaterList"
         render={props => {
           return <MarkedForLaterList {...props} 
@@ -58,7 +58,7 @@ const ApplicationViews = props => {
         }}
       />
 
-<Route
+<Route 
         path="/CompletedList"
         render={props => {
           return <CompletedList {...props} 
@@ -77,7 +77,7 @@ const ApplicationViews = props => {
       />
 
 
-<Route
+<Route exact
         path="/AddNewReadForm"
         render={props => { if (hasUser) {
             return <AddNewReadForm {...props} />;

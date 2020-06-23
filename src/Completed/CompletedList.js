@@ -17,6 +17,7 @@ const CompletedList = props => {
 
   //The component where state lives is the only place state can change
   //every time setCRMS is invoked, it changes state of the CL component and forces react to re-render it
+  //deletes CR object
   const deleteCompletedRead = id => {
     ReadManager.delete(id)
       .then(() => UserManager.getCompleted().then(setCompletedRMs));

@@ -25,12 +25,15 @@ const CompletedCard = props => {
         >
           Delete
         </Button>{" "}
-        
-
-        <Button color="success" type="button"
-  onClick={() => props.history.push(`/CompletedList/${props.readObject.id}/edit`)}>
-  Edit
-</Button>
+        <Button
+          color="success"
+          type="button"
+          onClick={() =>
+            props.history.push(`/CompletedList/${props.readObject.id}/edit`)
+          }
+        >
+          Edit
+        </Button>
       </CardBody>
     </Card>
   );

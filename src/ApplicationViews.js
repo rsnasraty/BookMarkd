@@ -5,9 +5,11 @@ import Home from "./components/Home";
 import RegisterCard from "./auth/RegisterCard";
 import AddNewReadForm from "./newReads/AddNewReadForm";
 import InProgressList from "./inProgress/InProgressList";
+import InProgressEdit from "./inProgress/InProgressEdit";
 import MarkedForLaterList from "./markedForLater/MarkedForLaterList";
 import CompletedList from "./Completed/CompletedList";
 import CompletedEdit from "./Completed/CompletedEdit";
+
 
 //dictates which component should be rendered when links are clicked depending on if a user is logged in or not
 //Controller Component. Its only responsibility is to control the behavior of the system and maps URLs to components.
@@ -40,14 +42,14 @@ const ApplicationViews = props => {
         }}
       />
 
-      <Route
+      <Route exact
         path="/InProgressList"
         render={props => {
           return <InProgressList {...props} />;
         }}
       />
 
-      <Route
+      <Route exact
         path="/MarkedForLaterList"
         render={props => {
           return <MarkedForLaterList {...props} />;
@@ -98,6 +100,30 @@ const ApplicationViews = props => {
           }
         }}
       />
+
+
+<Route
+        path="/InProgressList/:readingMaterialsId(\d+)/edit"
+        render={props => {
+          if (hasUser) {
+            return (
+              <InProgressEdit
+                readingMaterialsId={parseInt(
+                  props.match.params.readingMaterialsId
+                )}
+                {...props}
+              />
+            );
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+
+
+
+
+
     </React.Fragment>
   );
 };

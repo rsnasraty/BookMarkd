@@ -6,13 +6,13 @@ import InProgressCard from "./InProgressCard";
 //use props to pass in setUser from Login/AppViews
 const InProgressList = props => {
   const [IPRMs, setIPRMs] = useState([]);
+  const userId = sessionStorage.getItem("credentials");
 
   //1) Working on this to get logged in UserId
   //gets userId
 
   //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
-    const userId = sessionStorage.getItem("credentials");
     UserManager.getInProgress(userId).then(IPReads => {
       setIPRMs(IPReads);
     });
@@ -20,7 +20,7 @@ const InProgressList = props => {
 
   const deleteIPRead = id => {
     ReadManager.delete(id)
-      .then(() => UserManager.getInProgress().then(setIPRMs));
+      .then(() => UserManager.getInProgress(userId).then(setIPRMs));
   };
 
   return (

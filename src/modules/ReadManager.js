@@ -21,6 +21,15 @@ delete(id) {
   return fetch(`${remoteURL}/readingMaterials/${id}`, {
     method: "DELETE"
   }).then(result => result.json())
+},
+update(editedIP,userId) {
+  return fetch(`${remoteURL}/readingMaterials?userId=${userId}&${editedIP.id}&statusId=In-Progress`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedIP,userId)
+  }).then(data => data.json());
 }
 
 

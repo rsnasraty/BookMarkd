@@ -2,8 +2,9 @@ import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import React, { useState, useEffect } from "react";
 import ReadManager from "../modules/ReadManager";
 
-const InProgressEdit = props => {
-  const [inProgressRead, setInProgressReads] = useState({
+const MarkedForLaterEdit = props => {
+  //sets cRs objects initial state as an empty object to be filled when setCRs function is called
+  const [markedFLRead, setMarkedFLReads] = useState({
     userId: parseInt(sessionStorage.getItem("credentials")),
     title: "",
     authorName: "",
@@ -15,35 +16,36 @@ const InProgressEdit = props => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
+  //records user input in the form, then setCRs updates the cR object with the users input 
   const handleFieldChange = evt => {
-    const stateToChange = { ...inProgressRead };
+    const stateToChange = { ...markedFLRead };
     stateToChange[evt.target.id] = evt.target.value;
-    setInProgressReads(stateToChange);
+    setMarkedFLReads(stateToChange);
   };
 
-const updateExistingIP = evt => {
+const updateExistingMFL = evt => {
     evt.preventDefault();
     setIsLoading(true);
 
-    const editedIPObject = {
+    const editedMFLObject = {
      id: props.match.params.readingMaterialsId,
-     authorName: inProgressRead.authorName,
-     readTypeId: inProgressRead.readTypeId,
-     statusId: inProgressRead.statusId,
-     addDate: inProgressRead.addDate,
-     link: inProgressRead.link,
-     notes: inProgressRead.notes
+     authorName: markedFLRead.authorName,
+     readTypeId: markedFLRead.readTypeId,
+     statusId: markedFLRead.statusId,
+     addDate: markedFLRead.addDate,
+     link: markedFLRead.link,
+     notes: markedFLRead.notes
         }
 
-ReadManager.update(editedIPObject)
-.then(() => props.history.push("/InProgressList"));
+ReadManager.update(editedMFLObject)
+.then(() => props.history.push("/CompletedList"));
 
 }
 
 useEffect(() => {
     ReadManager.get(props.match.params.readingMaterialsId)
-      .then(inProgressRead => {
-        setInProgressReads(inProgressRead);
+      .then(markedFLRead => {
+        setMarkedFLReads(markedFLRead);
         setIsLoading(false);
       });
   }, []);
@@ -61,7 +63,7 @@ return (
           type="text"
           name="title"
           id="title"
-          value={inProgressRead.title}
+          value={markedFLRead.title}
           placeholder="Sailor Moon 1"
         />
       </FormGroup>
@@ -73,7 +75,7 @@ return (
           type="text"
           name="author"
           id="authorName"
-          value={inProgressRead.authorName}
+          value={markedFLRead.authorName}
           placeholder="Naoko Takeuchi"
         />
       </FormGroup>
@@ -85,7 +87,7 @@ return (
           type="text"
           name="date"
           id="addDate"
-          value={inProgressRead.addDate}
+          value={markedFLRead.addDate}
           placeholder="06/17/2020"
         />
       </FormGroup>
@@ -95,7 +97,7 @@ return (
           required
           onChange={handleFieldChange}
           type="select"
-          value={inProgressRead.readTypeId}
+          value={markedFLRead.readTypeId}
           name="readTypeId"
           id="readTypeId"
         >
@@ -111,7 +113,7 @@ return (
           required
           onChange={handleFieldChange}
           type="select"
-          value={inProgressRead.statusId}
+          value={markedFLRead.statusId}
           name="statusId"
           id="statusId"
         >
@@ -127,7 +129,7 @@ return (
           onChange={handleFieldChange}
           type="text"
           name="link"
-          value={inProgressRead.link}
+          value={markedFLRead.link}
           id="link"
           placeholder="www.sailormoon.com"
         />
@@ -138,14 +140,14 @@ return (
           required
           onChange={handleFieldChange}
           type="text"
-          value={inProgressRead.notes}
+          value={markedFLRead.notes}
           name="notes"
           id="notes"
         />
       </FormGroup>
       <Button
         disabled={isLoading}
-        onClick={updateExistingIP}
+        onClick={updateExistingMFL}
         outline
         color="primary"
       >
@@ -156,4 +158,4 @@ return (
 );
 };
 
-export default InProgressEdit
+export default MarkedForLaterEdit 

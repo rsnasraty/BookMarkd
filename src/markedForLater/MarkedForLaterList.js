@@ -6,11 +6,11 @@ import MarkedForLaterCard from "./MarkedForLaterCard";
 //use props to pass in setUser from Login/AppViews
 const MarkedForLaterList = props => {
   const [markedRMs, setMarkedRMs] = useState([]);
+  const userId = sessionStorage.getItem("credentials");
 
   //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). 
   //The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
-    const userId = sessionStorage.getItem("credentials");
     UserManager.getMarkedFL(userId).then(MFLRMs => {
       setMarkedRMs(MFLRMs);
     });

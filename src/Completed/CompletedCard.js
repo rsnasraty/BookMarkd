@@ -33,7 +33,7 @@ const CompletedCard = props => {
           }
         >
           Edit
-        </Button>
+        </Button>{" "}
       </CardBody>
     </Card>
   );

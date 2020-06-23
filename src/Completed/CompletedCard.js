@@ -19,7 +19,7 @@ const CompletedCard = props => {
         <CardText>{props.readObject.addDate}</CardText>
         <CardText>{props.readObject.link}</CardText>
         <CardText tag="h4">{props.readObject.notes}</CardText>
-        <Link to={`/CompletedList${props.readObject.id}`}>
+        <Link to={`/CompletedList/${props.readObject.id}`}>
         <Button
           color="info"
           type="button"
@@ -28,6 +28,11 @@ const CompletedCard = props => {
           Delete
         </Button>{" "}
         </Link>
+
+        <Button color="success" type="button"
+  onClick={() => props.history.push(`/CompletedList/${props.readingMaterials.id}/edit`)}>
+  Edit
+</Button>
       </CardBody>
     </Card>
   );

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./nav/NavBar";
 import ApplicationViews from "./ApplicationViews.js";
 
-//Top part of my app
+//Top part of my app (Parent), that renders NavBar and ApplicationViews
 //passes setUser to applicationviews, which then passes it down via props to login
 
 const BookMark = () => {

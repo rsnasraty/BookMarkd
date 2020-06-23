@@ -11,6 +11,7 @@ import {
   NavLink
 } from 'reactstrap';
 
+// This is a Presentation Component. Directly expresses HTML.
 const NavBar = (props) => {
   const handleLogout = () => {
     props.clearUser();

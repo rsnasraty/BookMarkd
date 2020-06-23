@@ -8,9 +8,9 @@
     },
     {
       "id": 2,
-      "email": "words@meanthings.com",
+      "email": "the@read.com",
       "username": "crissle",
-      "password": "theread"
+      "password": "kf"
     },
     {
       "email": "cat@cat.com",
@@ -23,14 +23,7 @@
       "username": "meow",
       "password": "meow",
       "confirmPassword": "meow",
-      "id": 5
-    },
-    {
-      "email": "cat@dog.com",
-      "username": "dog",
-      "password": "dog",
-      "confirmPassword": "dog",
-      "id": 6
+      "id": 4
     }
   ],
   "readingMaterials": [

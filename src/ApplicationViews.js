@@ -8,6 +8,8 @@ import InProgressList from "./inProgress/InProgressList"
 import MarkedForLaterList from "./markedForLater/MarkedForLaterList"
 import CompletedList from "./Completed/CompletedList"
 
+//dictates which component should be rendered when links are clicked depending on if a user is logged in or not
+//Controller Component. Its only responsibility is to control the behavior of the system and maps URLs to components.
 
 const ApplicationViews = props => {
   const hasUser = props.hasUser;

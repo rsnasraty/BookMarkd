@@ -37,10 +37,6 @@ export default {
     return fetch(
       `${remoteURL}/readingMaterials?userId=${userId}&statusId=Completed`
     ).then(result => result.json());
-  },
-  delete(id) {
-    return fetch(`${remoteURL}/readingMaterials/${id}`, {
-      method: "DELETE"
-    }).then(result => result.json())
   }
+  
 };

@@ -3,7 +3,7 @@ import UserManager from "../modules/UserManager";
 import ReadManager from "../modules/ReadManager"
 import CompletedCard from "./CompletedCard";
 
-
+//parent component for all my Completed stuff
 //use props to pass in setUser from Login/AppViews
 const CompletedList = props => {
   const [completedRMs, setCompletedRMs] = useState([]);

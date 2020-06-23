@@ -38,13 +38,13 @@ export default {
       `${remoteURL}/readingMaterials?userId=${userId}&statusId=Completed`
     ).then(result => result.json());
   },
-  update(editedCR) {
-    return fetch(`${remoteURL}/readingMaterials/${editedCR.id}&statusId=Completed`, {
+  update(editedCR,userId) {
+    return fetch(`${remoteURL}/readingMaterials?userId=${userId}&${editedCR.id}&statusId=Completed`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(editedCR)
+      body: JSON.stringify(editedCR,userId)
     }).then(data => data.json());
   }
   

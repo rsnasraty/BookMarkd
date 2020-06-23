@@ -7,6 +7,7 @@ import AddNewReadForm from "./newReads/AddNewReadForm";
 import InProgressList from "./inProgress/InProgressList";
 import InProgressEdit from "./inProgress/InProgressEdit";
 import MarkedForLaterList from "./markedForLater/MarkedForLaterList";
+import MarkedForLaterEdit from "./markedForLater/MarkedForLaterEdit"
 import CompletedList from "./Completed/CompletedList";
 import CompletedEdit from "./Completed/CompletedEdit";
 
@@ -120,6 +121,23 @@ const ApplicationViews = props => {
         }}
       />
 
+<Route
+        path="/MarkedForLaterList/:readingMaterialsId(\d+)/edit"
+        render={props => {
+          if (hasUser) {
+            return (
+              <MarkedForLaterEdit
+                readingMaterialsId={parseInt(
+                  props.match.params.readingMaterialsId
+                )}
+                {...props}
+              />
+            );
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
 
 
 

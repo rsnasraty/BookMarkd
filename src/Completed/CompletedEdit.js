@@ -27,7 +27,7 @@ const updateExistingCR = evt => {
     evt.preventDefault();
     setIsLoading(true);
 
-    const editedCR = {
+    const editedCRObject = {
      id: props.match.params.readingMaterialsId,
      authorName: completedRead.authorName,
      readTypeId: completedRead.readTypeId,
@@ -37,7 +37,7 @@ const updateExistingCR = evt => {
      notes: completedRead.notes
         }
 
-ReadManager.update(editedCR)
+ReadManager.update(editedCRObject)
 .then(() => props.history.push("/CompletedList"));
 
 }

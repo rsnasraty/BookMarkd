@@ -38,17 +38,17 @@ export default {
       `${remoteURL}/readingMaterials?userId=${userId}&statusId=Completed`
     ).then(result => result.json());
   },
-  update(editedCR,userId) {
-    return fetch(`${remoteURL}/readingMaterials?userId=${userId}&${editedCR.id}&statusId=Completed`, {
+  update(editedCRObject,userId) {
+    return fetch(`${remoteURL}/readingMaterials?userId=${userId}&${editedCRObject.id}&statusId=Completed`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(editedCR,userId)
+      body: JSON.stringify(editedCRObject,userId)
     }).then(data => data.json());
   },
-  update(editedUserObject,id) {
-    return fetch(`${remoteURL}/users?id=${id}&${editedUserObject.id}`, {
+  update(editedUserObject, id) {
+    return fetch(`${remoteURL}/users/id=${id}&${editedUserObject.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

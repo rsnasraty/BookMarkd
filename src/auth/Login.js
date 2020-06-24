@@ -54,7 +54,7 @@ const Login = props => {
       <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">BookMark'd</h1>
-          <p className="lead">This is a placefiller for the app logo</p>
+          <p className="lead"></p>
         </Container>
       </Jumbotron>
       <Form onSubmit={handleLogin}>

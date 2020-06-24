@@ -4,10 +4,10 @@ import RegisterCard from "./RegisterCard";
 
 const UserList = props => {
   const [editedUser, setEditedUsers] = useState([]);
-  const id = sessionStorage.getItem("credentials");
+  const userId = sessionStorage.getItem("credentials");
 
   useEffect(() => {
-    UserManager.get(id).then(editedUser => {
+    UserManager.get(userId).then(editedUser => {
       setEditedUsers(editedUser);
     });
   }, []);

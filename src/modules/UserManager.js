@@ -48,7 +48,7 @@ export default {
     }).then(data => data.json());
   },
   update(editedUserObject,id) {
-    return fetch(`${remoteURL}/users/${id}&${editedUserObject.id}`, {
+    return fetch(`${remoteURL}/users?id=${id}&${editedUserObject.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

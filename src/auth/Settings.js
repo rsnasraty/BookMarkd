@@ -26,7 +26,7 @@ const updateExistingUser = evt => {
     setIsLoading(true);
 
     const editedUserObject = {
-        id: parseInt(sessionStorage.getItem("credentials")),
+        id: props.match.params.userId,
         email: editedUser.email,
         username: editedUser.username,
         password: editedUser.password,
@@ -40,7 +40,7 @@ UserManager.update(editedUserObject)
 }
 
 useEffect(() => {
-    UserManager.get(parseInt(sessionStorage.getItem("credentials")))
+    UserManager.get(props.match.params.userId)
       .then(editedUser => {
         setEditedUsers(editedUser);
         setIsLoading(false);

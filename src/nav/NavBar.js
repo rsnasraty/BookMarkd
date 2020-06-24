@@ -43,25 +43,25 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/Settings">Settings</NavLink>
+            <NavLink href="/settings">Settings</NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/Home">Home</NavLink>
+            <NavLink href="/home">Home</NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/AddNewReadForm">Add a New Read</NavLink>
+            <NavLink href="/addNewReadForm">Add a New Read</NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/MarkedForLaterList">Marked For Later</NavLink>
+            <NavLink href="/markedForLaterList">Marked For Later</NavLink>
             </NavItem>
             : null}
             {props.hasUser
@@ -73,7 +73,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/CompletedList">Completed</NavLink>
+            <NavLink href="/completedList">Completed</NavLink>
             </NavItem>
             : null}
             {props.hasUser 

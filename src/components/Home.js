@@ -9,7 +9,7 @@ const Home = props => {
       <Container>
         <Row>
           <Card body outline color="info" className="home_cards">
-            <Link to="AddNewReadForm">
+            <Link to="addNewReadForm">
               <img src="/images/notepad.svg" className="addNew" alt="Notepad" />
             </Link>
             <CardBody>
@@ -20,7 +20,7 @@ const Home = props => {
 
           {/*  /* //card 2// */}
           <Card body outline color="info" className="home_cards">
-            <Link to="InProgressList">
+            <Link to="inProgressList">
               <img
                 src="/images/inprogress.svg"
                 max-width="50%"
@@ -39,7 +39,7 @@ const Home = props => {
 
         <Row>
           <Card body outline color="info" className="home_cards">
-            <Link to="MarkedForLaterList">
+            <Link to="markedForLaterList">
               <img
                 src="/images/bookmark.svg"
                 max-width="50%"
@@ -55,7 +55,7 @@ const Home = props => {
 
           {/* //card 4 */}
           <Card body outline color="info" className="home_cards">
-            <Link to="CompletedList">
+            <Link to="completedList">
               <img
                 src="/images/bookblue.svg"
                 max-width="50%"

@@ -64,6 +64,19 @@ const ApplicationViews = props => {
         }}
       />
 
+<Route exact
+        path="/Settings"
+        render={props => {
+          return <Settings {...props} />;
+        }}
+      />
+
+<Route exact
+        path="/UserList"
+        render={props => {
+          return <UserList {...props} />;
+        }}
+      />
 
 
       <Route exact
@@ -161,7 +174,8 @@ const ApplicationViews = props => {
           if (hasUser) {
             return (
               <Settings
-                userId={id}
+                userId={parseInt(
+                  props.match.params.userId)}
                 {...props}
               />
             );

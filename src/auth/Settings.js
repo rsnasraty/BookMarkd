@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UserManager from "../modules/UserManager";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
@@ -40,9 +40,9 @@ UserManager.update(editedUserObject)
 }
 
 useEffect(() => {
-    UserManager.get(id)
+    UserManager.get(parseInt(sessionStorage.getItem("credentials")))
       .then(editedUser => {
-        setEditedUser(editedUser);
+        setEditedUsers(editedUser);
         setIsLoading(false);
       });
   }, []);

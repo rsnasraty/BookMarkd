@@ -89,8 +89,9 @@ useEffect(() => {
             value={editedUser.password}
           />
         </FormGroup>
+
         <FormGroup>
-          <Label for="confirmPassword">Password</Label>
+          <Label for="confirmPassword">Confirm Password</Label>
           <Input
             type="password"
             required

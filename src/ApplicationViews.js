@@ -3,6 +3,8 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./components/Home";
 import RegisterCard from "./auth/RegisterCard";
+import UserList from "./auth/UserList"
+import Settings from "./auth/Settings"
 import AddNewReadForm from "./newReads/AddNewReadForm";
 import InProgressList from "./inProgress/InProgressList";
 import InProgressEdit from "./inProgress/InProgressEdit";
@@ -49,6 +51,33 @@ const ApplicationViews = props => {
           return <InProgressList {...props} />;
         }}
       />
+
+<Route
+        exact
+        path="/UserList"
+        render={props => {
+          if (hasUser) {
+            return <Settings {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+
+<Route exact
+        path="/Settings"
+        render={props => {
+          return <Settings {...props} />;
+        }}
+      />
+
+<Route exact
+        path="/UserList"
+        render={props => {
+          return <UserList {...props} />;
+        }}
+      />
+
 
       <Route exact
         path="/MarkedForLaterList"
@@ -138,6 +167,26 @@ const ApplicationViews = props => {
           }
         }}
       />
+
+<Route
+        path="/UserList/:userId(\d+)/edit"
+        render={props => {
+          if (hasUser) {
+            return (
+              <Settings
+                userId={parseInt(
+                  props.match.params.userId)}
+                {...props}
+              />
+            );
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+
+
+
 
 
 

@@ -25,11 +25,11 @@ const NavBar = (props) => {
     <div>
     <header>
      <h1 className="site-title">
-     
+     BookMark'd
       </h1>
       </header>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">BookMarkd</NavbarBrand>
+      <Navbar align="right" color="info" light expand="md">
+        <NavbarBrand href="/"></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -38,6 +38,12 @@ const NavBar = (props) => {
             ?
             <NavItem>
             <NavLink href="/login">Login</NavLink>
+            </NavItem>
+            : null}
+            {props.hasUser
+            ?
+            <NavItem>
+            <NavLink href="/Settings">Settings</NavLink>
             </NavItem>
             : null}
             {props.hasUser

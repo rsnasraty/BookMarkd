@@ -25,7 +25,7 @@ const ApplicationViews = props => {
     <React.Fragment>
       <Route
         exact
-        path="/Home"
+        path="/"
         render={props => {
           if (hasUser) {
             return <Home {...props} />;

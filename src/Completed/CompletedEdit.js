@@ -2,6 +2,7 @@ import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import React, { useState, useEffect } from "react";
 import ReadManager from "../modules/ReadManager";
 
+
 const CompletedEdit = props => {
   //sets cRs objects initial state as an empty object to be filled when setCRs function is called
   const [completedRead, setCompletedReads] = useState({
@@ -16,12 +17,18 @@ const CompletedEdit = props => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
+  //As changes are made in the form, state is updated
   //records user input in the form, then setCRs updates the cR object with the users input 
   const handleFieldChange = evt => {
     const stateToChange = { ...completedRead };
     stateToChange[evt.target.id] = evt.target.value;
     setCompletedReads(stateToChange);
   };
+
+/* 
+  The updateExistingCR method will call setIsLoading(true) - this ensures the user cannot repeatedly click button while API is being updated.
+Invoke ReadManger.updateCR() to change the API data.
+Once the API has updated, change the view to display all the CROBjects. */
 
 const updateExistingCR = evt => {
     evt.preventDefault();
@@ -41,6 +48,9 @@ ReadManager.updateCR(editedCRObject)
 .then(() => props.history.push("/CompletedList"));
 
 }
+
+// ReadManager API call function gets the readingMaterial based on the Id in the URL
+//then data loads and setCRs is invoked with new data, then the component is rendered to the DOM
 
 useEffect(() => {
     ReadManager.get(props.match.params.readingMaterialsId)

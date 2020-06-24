@@ -47,13 +47,13 @@ export default {
       body: JSON.stringify(editedCRObject,userId)
     }).then(data => data.json());
   },
-  update(editedUserObject, id) {
-    return fetch(`${remoteURL}/users/id=${id}&${editedUserObject.id}`, {
+  updateUser(editedUserObject) {
+    return fetch(`${remoteURL}/users/${editedUserObject.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(editedUserObject,id)
+      body: JSON.stringify(editedUserObject)
     }).then(data => data.json());
   }
   

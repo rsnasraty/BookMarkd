@@ -54,7 +54,7 @@ const ApplicationViews = props => {
 
 <Route
         exact
-        path="/UserList"
+        path="/Settings"
         render={props => {
           if (hasUser) {
             return <Settings {...props} />;
@@ -64,12 +64,6 @@ const ApplicationViews = props => {
         }}
       />
 
-<Route exact
-        path="/Settings"
-        render={props => {
-          return <Settings {...props} />;
-        }}
-      />
 
 <Route exact
         path="/UserList"

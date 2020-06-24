@@ -34,7 +34,7 @@ const updateExistingUser = evt => {
            }
 
 
-UserManager.update(editedUserObject)
+UserManager.updateUser(editedUserObject)
 .then(() => props.history.push("/Settings"));
 
 }
@@ -104,6 +104,7 @@ useEffect(() => {
         </FormGroup>
 
         <div className="alignRight">
+        
           <Button
             disabled={isLoading}
             onClick={updateExistingUser}

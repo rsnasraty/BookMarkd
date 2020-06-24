@@ -36,7 +36,7 @@ export default {
       }
     ).then(data => data.json());
   },
-  update(editedCRObject, userId) {
+  updateCR(editedCRObject, userId) {
     return fetch(
       `${remoteURL}/readingMaterials?userId=${userId}&${editedCRObject.id}&statusId=In-Progress`,
       {

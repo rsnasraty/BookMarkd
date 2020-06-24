@@ -37,7 +37,7 @@ const updateExistingCR = evt => {
      notes: completedRead.notes
         }
 
-ReadManager.update(editedCRObject)
+ReadManager.updateCR(editedCRObject)
 .then(() => props.history.push("/CompletedList"));
 
 }

@@ -20,33 +20,31 @@ const Settings = props => {
     setEditedUsers(stateToChange);
   };
 
-
-const updateExistingUser = evt => {
+  const updateExistingUser = evt => {
     evt.preventDefault();
     setIsLoading(true);
 
     const editedUserObject = {
-        id: parseInt(sessionStorage.getItem("credentials")),
-        email: editedUser.email,
-        username: editedUser.username,
-        password: editedUser.password,
-        confirmPassword: editedUser.confirmPassword
-           }
+      id: parseInt(sessionStorage.getItem("credentials")),
+      email: editedUser.email,
+      username: editedUser.username,
+      password: editedUser.password,
+      confirmPassword: editedUser.confirmPassword
+    };
 
+    UserManager.updateUser(editedUserObject).then(() =>
+      props.history.push("/Settings")
+    );
+  };
 
-UserManager.updateUser(editedUserObject)
-.then(() => props.history.push("/Settings"));
-
-}
-
-useEffect(() => {
-    UserManager.get(parseInt(sessionStorage.getItem("credentials")))
-      .then(editedUser => {
+  useEffect(() => {
+    UserManager.get(parseInt(sessionStorage.getItem("credentials"))).then(
+      editedUser => {
         setEditedUsers(editedUser);
         setIsLoading(false);
-      });
+      }
+    );
   }, []);
- 
 
   return (
     <>
@@ -104,12 +102,11 @@ useEffect(() => {
         </FormGroup>
 
         <div className="alignRight">
-        
           <Button
             disabled={isLoading}
             onClick={updateExistingUser}
             outline
-            color="primary"
+            color="success"
           >
             Submit
           </Button>{" "}

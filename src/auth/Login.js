@@ -46,7 +46,7 @@ const Login = props => {
       });
     // Step 4: Call setUser with the user from the database
     props.setUser(credentials);
-    props.history.push("/Home");
+    props.history.push("/home");
   };
 
   return (

@@ -11,14 +11,14 @@ const MarkedForLaterList = props => {
   //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). 
   //The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
-    UserManager.getMarkedFL(userId).then(MFLRMs => {
+    ReadManager.getMarkedFL(userId).then(MFLRMs => {
       setMarkedRMs(MFLRMs);
     });
   }, []);
 
   const deleteMFLRead = id => {
     ReadManager.delete(id)
-      .then(() => UserManager.getMarkedFL().then(setMarkedRMs));
+      .then(() => ReadManager.getMarkedFL().then(setMarkedRMs));
   };
 
   return (

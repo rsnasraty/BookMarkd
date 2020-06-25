@@ -24,16 +24,8 @@ const Settings = props => {
     evt.preventDefault();
     setIsLoading(true);
 
-    const editedUserObject = {
-      id: parseInt(sessionStorage.getItem("credentials")),
-      email: editedUser.email,
-      username: editedUser.username,
-      password: editedUser.password,
-      confirmPassword: editedUser.confirmPassword
-    };
-
-    UserManager.updateUser(editedUserObject).then(() =>
-      props.history.push("/Settings")
+    UserManager.updateUser(editedUser).then(() =>
+      props.history.push("/settings")
     );
   };
 

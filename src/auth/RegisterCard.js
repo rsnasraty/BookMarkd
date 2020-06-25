@@ -26,7 +26,7 @@ const RegisterCard = props => {
     } else {
       setIsLoading(true);
       // Create the User and redirect user to Home
-      UserManager.post(user).then(() => props.history.push("/Home"));
+      UserManager.post(user).then(() => props.history.push("/home"));
     }
   };
 

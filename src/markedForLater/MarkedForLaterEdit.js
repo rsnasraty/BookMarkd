@@ -27,18 +27,9 @@ const updateExistingMFL = evt => {
     evt.preventDefault();
     setIsLoading(true);
 
-    const editedMFLObject = {
-     id: props.match.params.readingMaterialsId,
-     authorName: markedFLRead.authorName,
-     readTypeId: markedFLRead.readTypeId,
-     statusId: markedFLRead.statusId,
-     addDate: markedFLRead.addDate,
-     link: markedFLRead.link,
-     notes: markedFLRead.notes
-        }
 
-ReadManager.update(editedMFLObject)
-.then(() => props.history.push("/CompletedList"));
+ReadManager.update(markedFLRead)
+.then(() => props.history.push("/markedForLaterList"));
 
 }
 

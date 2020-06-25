@@ -23,21 +23,6 @@ export default {
       body: JSON.stringify(newUser)
     }).then(data => data.json());
   },
-  getInProgress(userId) {
-    return fetch(
-      `${remoteURL}/readingMaterials?userId=${userId}&statusId=In-Progress`
-    ).then(result => result.json());
-  },
-  getMarkedFL(userId) {
-    return fetch(
-      `${remoteURL}/readingMaterials?userId=${userId}&statusId=Marked For Later`
-    ).then(result => result.json());
-  },
-  getCompleted(userId) {
-    return fetch(
-      `${remoteURL}/readingMaterials?userId=${userId}&statusId=Completed`
-    ).then(result => result.json());
-  },
   updateUser(editedUserObject) {
     return fetch(`${remoteURL}/users/${editedUserObject.id}`, {
       method: "PUT",

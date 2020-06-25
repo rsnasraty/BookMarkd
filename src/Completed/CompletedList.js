@@ -11,7 +11,7 @@ const CompletedList = props => {
 
 //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
-    UserManager.getCompleted(userId).then(CompletedReads => {
+    ReadManager.getCompleted(userId).then(CompletedReads => {
       setCompletedRMs(CompletedReads);
     });
   }, []);
@@ -21,7 +21,7 @@ const CompletedList = props => {
   //deletes CR object
   const deleteCompletedRead = id => {
     ReadManager.delete(id)
-      .then(() => UserManager.getCompleted(userId).then(setCompletedRMs));
+      .then(() => ReadManager.getCompleted(userId).then(setCompletedRMs));
   };
 
   //Pass the deleteCompletedRead function to the child component (CCard)

@@ -13,14 +13,14 @@ const InProgressList = props => {
 
   //The function argument to useEffect tells React to call the getItem() function (that will fetch data from our API). The empty array argument tells React to call the function on the first render of the component.
   useEffect(() => {
-    UserManager.getInProgress(userId).then(IPReads => {
+    ReadManager.getInProgress(userId).then(IPReads => {
       setIPRMs(IPReads);
     });
   }, []);
 
   const deleteIPRead = id => {
     ReadManager.delete(id)
-      .then(() => UserManager.getInProgress(userId).then(setIPRMs));
+      .then(() => ReadManager.getInProgress(userId).then(setIPRMs));
   };
 
   return (

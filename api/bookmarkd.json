@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "email": "a@b.com",
+      "email": "a@a.com",
       "username": "booknook",
       "password": "a",
       "confirmPassword": "a"
@@ -27,10 +27,10 @@
       "id": 4
     },
     {
-      "email": "kurt@kurt.com",
-      "username": "kurt",
-      "password": "kurt",
-      "confirmPassword": "kurt",
+      "email": "cat@hat.com",
+      "username": "hat",
+      "password": "hat",
+      "confirmPassword": "hat",
       "id": 5
     }
   ],
@@ -38,68 +38,57 @@
     {
       "userId": 1,
       "id": 1,
-      "title": "Leigha",
-      "authorName": "Mrs.Book ",
-      "readTypeId": "Fanfiction",
+      "title": "Did you know I was a Barista?, the Zane Bliss Origin Story",
+      "authorName": "Zane Bliss",
+      "readTypeId": "Blog",
       "statusId": "In-Progress",
       "addDate": "06/10/2020",
-      "link": "google.com",
-      "notes": "The book is TRASH"
+      "link": "zanebliss.org",
+      "notes": "This man enjoys black coffee and that's all I need to know."
     },
     {
       "userId": 1,
       "id": 2,
-      "authorName": "Roxanne ",
-      "title": "Luke",
+      "title": "Pottery Wars: Unglazed",
+      "authorName": "Michelle McLane",
       "readTypeId": "Article",
       "statusId": "In-Progress",
-      "addDate": "06/21/2020",
-      "link": "newyorktimes.com",
-      "notes": "Facts"
+      "addDate": "06/25/2020",
+      "link": "www.nytimes.com",
+      "notes": "The story too hot for the kiln"
     },
     {
       "userId": 1,
-      "title": "Luke and Leigha",
+      "title": "Luke and Leigha:...Unrelated?",
       "authorName": "Cohort 40",
       "readTypeId": "Blog",
       "statusId": "Marked For Later",
       "addDate": "06/21/2020",
       "link": "tmz.com",
-      "notes": "He met Taylor Swift, she plays ice hockey, where's the movie?",
+      "notes": "Her actual brother's name is Luke",
       "id": 3
     },
     {
       "userId": 1,
-      "title": "The Rise of Skywalker: except good. Also Ben Solo is the 'Skywalker' because Leia is his mommy",
+      "title": "The Rise of Skywalker: except Ben Solo is the Skywalker and the movie isn't garbage",
       "authorName": "Rian Johnson",
       "readTypeId": "Fanfiction",
       "statusId": "Completed",
       "addDate": "06/21/2020",
       "link": "https://archiveofourown.org/",
-      "notes": "Adam Driver Deserved Better",
+      "notes": "Release the Rian Johnson cut and by cut I mean make an entirely new movie",
       "id": 4
     },
     {
       "userId": 1,
-      "title": "Reylo",
+      "title": "Rey and Kylo adopt a Porg",
       "authorName": "Rian Johnson",
       "readTypeId": "Fanfiction",
       "statusId": "Completed",
       "addDate": "06/22/2020",
       "link": "https://archiveofourown.org/",
-      "notes": "It's canon /kanyeshrug",
+      "notes": "rated 5/5 porgs",
       "id": 5
-    },
-    {
-      "userId": 5,
-      "title": "Meow",
-      "authorName": "Meow",
-      "readTypeId": "Article",
-      "statusId": "Complete",
-      "addDate": "06/21/2020",
-      "link": "www.google.com",
-      "notes": "Lol",
-      "id": 6
     }
   ],
   "readType": [

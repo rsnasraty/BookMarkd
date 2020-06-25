@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardLink, Container, Row } from "reactstrap";
+import { Card, CardBody, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./Home.css";
 

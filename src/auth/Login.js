@@ -11,13 +11,11 @@ import {
 } from "reactstrap";
 import UserManager from "../modules/UserManager";
 
-//first page users see 
 
+//Login = It takes all of the arguments passed into the component. The resulting object contains all of the properties.
 
-//Login = a function. It takes all of the arguments passed into the component. The resulting object contains all of the properties.
 const Login = props => {
-  //the empty object passed to useState here sets the initial value when first setting state
-  //credentials is the current value of state
+  //the empty object passed to useState here sets the initial value of credentials as state 
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
   const handleFieldChange = evt => {

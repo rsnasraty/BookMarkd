@@ -109,7 +109,7 @@ return (
           id="statusId"
         >
           <option>In-Progress</option>
-          <option>Complete</option>
+          <option>Completed</option>
           <option>Marked For Later</option>
         </Input>
       </FormGroup>

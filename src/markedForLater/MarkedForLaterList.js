@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import UserManager from "../modules/UserManager";
 import ReadManager from "../modules/ReadManager"
 import MarkedForLaterCard from "./MarkedForLaterCard";
 

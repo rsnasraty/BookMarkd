@@ -16,14 +16,17 @@ const InProgressEdit = props => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
-    //Take the inProgressRead object and make a copy of it ...inProgressRead makes a clean copy
+    //Take the inProgressRead object and make a copy of it ...inProgressRead 
+    //(... is the spread operator, that tells the code to take whatever is after the ..., looks inside it, and grabs each key value pair and adds it to the new object) makes a clean copy (READ inprogressRead, pull out the contents, and COPY into NEW OBJECT)
+    //it is not pointing to the existing object, ex: {inProgressRead} which would reference the existing object 
     const stateToChange = { ...inProgressRead };
     //event comes from the input typed into the form, gets the id in the input form
     //can use square brackets to enter a variable to reference a key
     //target tells you where the event comes from 
     //evt.target.id holds the value of a string
-    stateToChange[evt.target.id] = evt.target.value;
-    setInProgressReads(stateToChange);
+      stateToChange[evt.target.id] = evt.target.value;
+      setInProgressReads(stateToChange);
+      //passing stateToChange as an argument and telling set to make this the value of the state
   };
 
   const updateExistingIP = evt => {

@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "email": "a@a.com",
+      "email": "a@b.com",
       "username": "booknook",
       "password": "a",
       "confirmPassword": "a"
@@ -32,6 +32,20 @@
       "password": "hat",
       "confirmPassword": "hat",
       "id": 5
+    },
+    {
+      "email": "coffee@cup.com",
+      "username": "cup",
+      "password": "cup",
+      "confirmPassword": "cup",
+      "id": 6
+    },
+    {
+      "email": "meow@meowowowoow.com",
+      "username": "meow",
+      "password": "meow",
+      "confirmPassword": "meow",
+      "id": 7
     }
   ],
   "readingMaterials": [
@@ -59,7 +73,7 @@
     },
     {
       "userId": 1,
-      "title": "Luke and Leigha:...Unrelated?",
+      "title": "Luke and Leigha:...ENEMIES?",
       "authorName": "Cohort 40",
       "readTypeId": "Blog",
       "statusId": "Marked For Later",
@@ -89,6 +103,17 @@
       "link": "https://archiveofourown.org/",
       "notes": "rated 5/5 porgs",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "title": "Roxanne's Cats: The E True Hollywood Story",
+      "authorName": "Roxanne",
+      "readTypeId": "Novel",
+      "statusId": "Completed",
+      "addDate": "06/25/2020",
+      "link": "www.amazon.com",
+      "notes": "A timeless yet scandalous classic ",
+      "id": 6
     }
   ],
   "readType": [

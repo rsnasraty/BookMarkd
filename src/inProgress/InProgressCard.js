@@ -8,7 +8,8 @@ import {
   CardBody
 } from "reactstrap";
 
-const InProgressCard = props => {
+const InProgressCard = (props) => {
+  console.log(props.foo)
   return (
     <Card body outline color="info">
       <CardBody>

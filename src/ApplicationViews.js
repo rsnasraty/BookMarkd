@@ -3,7 +3,6 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./components/Home";
 import RegisterCard from "./auth/RegisterCard";
-import UserList from "./auth/UserList"
 import Settings from "./auth/Settings"
 import AddNewReadForm from "./newReads/AddNewReadForm";
 import InProgressList from "./inProgress/InProgressList";
@@ -61,14 +60,6 @@ const ApplicationViews = props => {
           } else {
             return <Redirect to="/login" />;
           }
-        }}
-      />
-
-
-<Route exact
-        path="/userList"
-        render={props => {
-          return <UserList {...props} />;
         }}
       />
 
@@ -163,7 +154,7 @@ const ApplicationViews = props => {
       />
 
 <Route
-        path="/userList/:userId(\d+)/edit"
+        path="/settings/:userId(\d+)/edit"
         render={props => {
           if (hasUser) {
             return (
@@ -178,11 +169,6 @@ const ApplicationViews = props => {
           }
         }}
       />
-
-
-
-
-
 
 
     </React.Fragment>

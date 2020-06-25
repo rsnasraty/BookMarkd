@@ -38,15 +38,6 @@ export default {
       `${remoteURL}/readingMaterials?userId=${userId}&statusId=Completed`
     ).then(result => result.json());
   },
-  update(editedCRObject,userId) {
-    return fetch(`${remoteURL}/readingMaterials?userId=${userId}&${editedCRObject.id}&statusId=Completed`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(editedCRObject,userId)
-    }).then(data => data.json());
-  },
   updateUser(editedUserObject) {
     return fetch(`${remoteURL}/users/${editedUserObject.id}`, {
       method: "PUT",

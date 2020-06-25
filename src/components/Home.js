@@ -13,8 +13,6 @@ const Home = props => {
               <img src="/images/notepad.svg" className="addNew" alt="Notepad" />
             </Link>
             <CardBody>
-           {/*    <CardLink href="#">Card Link</CardLink>
-              <CardLink href="#">Another Link</CardLink> */}
             </CardBody>
           </Card>
 
@@ -29,8 +27,6 @@ const Home = props => {
               />
             </Link>
             <CardBody>
-           {/*    <CardLink href="#">Card Link</CardLink>
-              <CardLink href="#">Another Link</CardLink> */}
             </CardBody>
           </Card>
         </Row>
@@ -48,8 +44,6 @@ const Home = props => {
               />
             </Link>
             <CardBody>
-           {/*    <CardLink href="#">Card Link</CardLink>
-              <CardLink href="#">Another Link</CardLink> */}
             </CardBody>
           </Card>
 
@@ -64,8 +58,6 @@ const Home = props => {
               />
             </Link>
             <CardBody>
-              {/* <CardLink href="#">Card Link</CardLink>
-              <CardLink href="#">Another Link</CardLink> */}
             </CardBody>
           </Card>
         </Row>

@@ -86,7 +86,7 @@ const AddNewReadForm = props => {
           <Input required
         onChange={handleFieldChange} type="select" name="statusId" id="statusId">
             <option>In-Progress</option>
-            <option>Complete</option>
+            <option>Completed</option>
             <option>Marked For Later</option>
           </Input>
         </FormGroup>

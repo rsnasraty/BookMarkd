@@ -32,6 +32,8 @@ const RegisterCard = props => {
 
   return (
     <>
+
+    {/* render user form, make user form */}
       <Form>
         <FormGroup>
           <Label for="email">Email</Label>

@@ -28,6 +28,7 @@ const InProgressList = props => {
       {/* passing props to IPCard so we can let it know what readObject is, need to tell it things so it knows what they mean on the card ex: delete. ...props lets you use props.history etc.  */}
       {IPRMs.map(readObject => (
         <InProgressCard
+        //key is for when u need to make multiples
           key={readObject.id}
           readObject={readObject}
           deleteIPRead={deleteIPRead}

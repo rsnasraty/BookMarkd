@@ -25,7 +25,7 @@ const ApplicationViews = props => {
     <React.Fragment>
       <Route
         exact
-        path="/"
+        path="/home"
         render={props => {
           if (hasUser) {
             return <Home {...props} />;
@@ -46,7 +46,7 @@ const ApplicationViews = props => {
       />
 
       <Route exact
-        path="/InProgressList"
+        path="/inProgressList"
         render={props => {
           return <InProgressList {...props} />;
         }}
@@ -54,7 +54,7 @@ const ApplicationViews = props => {
 
 <Route
         exact
-        path="/Settings"
+        path="/settings"
         render={props => {
           if (hasUser) {
             return <Settings {...props} />;
@@ -66,7 +66,7 @@ const ApplicationViews = props => {
 
 
 <Route exact
-        path="/UserList"
+        path="/userList"
         render={props => {
           return <UserList {...props} />;
         }}
@@ -74,21 +74,21 @@ const ApplicationViews = props => {
 
 
       <Route exact
-        path="/MarkedForLaterList"
+        path="/markedForLaterList"
         render={props => {
           return <MarkedForLaterList {...props} />;
         }}
       />
 
       <Route exact
-        path="/CompletedList"
+        path="/completedList"
         render={props => {
           return <CompletedList {...props} />;
         }}
       />
 
       <Route
-        path="/Register"
+        path="/register"
         render={props => {
           return <RegisterCard {...props} />;
         }}
@@ -96,7 +96,7 @@ const ApplicationViews = props => {
 
       <Route
         exact
-        path="/AddNewReadForm"
+        path="/addNewReadForm"
         render={props => {
           if (hasUser) {
             return <AddNewReadForm {...props} />;
@@ -108,7 +108,7 @@ const ApplicationViews = props => {
 
 {/* (\d+) means digit of any value, readingMaterialsId is a taco passed into CompletedEdit component */}
       <Route
-        path="/CompletedList/:readingMaterialsId(\d+)/edit"
+        path="/completedList/:readingMaterialsId(\d+)/edit"
         render={props => {
           if (hasUser) {
             return (
@@ -127,7 +127,7 @@ const ApplicationViews = props => {
 
 
 <Route
-        path="/InProgressList/:readingMaterialsId(\d+)/edit"
+        path="/inProgressList/:readingMaterialsId(\d+)/edit"
         render={props => {
           if (hasUser) {
             return (
@@ -145,7 +145,7 @@ const ApplicationViews = props => {
       />
 
 <Route
-        path="/MarkedForLaterList/:readingMaterialsId(\d+)/edit"
+        path="/markedForLaterList/:readingMaterialsId(\d+)/edit"
         render={props => {
           if (hasUser) {
             return (
@@ -163,7 +163,7 @@ const ApplicationViews = props => {
       />
 
 <Route
-        path="/UserList/:userId(\d+)/edit"
+        path="/userList/:userId(\d+)/edit"
         render={props => {
           if (hasUser) {
             return (

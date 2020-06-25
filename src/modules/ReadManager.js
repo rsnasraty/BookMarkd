@@ -24,40 +24,16 @@ export default {
       method: "DELETE"
     }).then(result => result.json());
   },
-  update(editedIPObject, userId) {
+  //update all updates to have this formating 
+  update(editedIPObject) {
     return fetch(
-      `${remoteURL}/readingMaterials?userId=${userId}&${editedIPObject.id}&statusId=In-Progress`,
+      `${remoteURL}/readingMaterials/${editedIPObject.id}`,
       {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(editedIPObject, userId)
-      }
-    ).then(data => data.json());
-  },
-  updateCR(editedCRObject, userId) {
-    return fetch(
-      `${remoteURL}/readingMaterials?userId=${userId}&${editedCRObject.id}&statusId=In-Progress`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(editedCRObject, userId)
-      }
-    ).then(data => data.json());
-  },
-
-  update(editedMFLObject, userId) {
-    return fetch(
-      `${remoteURL}/readingMaterials?userId=${userId}&${editedMFLObject.id}&statusId=In-Progress`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(editedMFLObject, userId)
+        body: JSON.stringify(editedIPObject)
       }
     ).then(data => data.json());
   }

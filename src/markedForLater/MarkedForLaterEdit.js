@@ -1,6 +1,8 @@
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import React, { useState, useEffect } from "react";
 import ReadManager from "../modules/ReadManager";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const MarkedForLaterEdit = props => {
   //sets cRs objects initial state as an empty object to be filled when setCRs function is called
@@ -15,6 +17,7 @@ const MarkedForLaterEdit = props => {
     notes: ""
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [startDate, setStartDate] = useState(new Date());
 
   //records user input in the form, then setCRs updates the cR object with the users input 
   const handleFieldChange = evt => {
@@ -72,15 +75,12 @@ return (
       </FormGroup>
       <FormGroup>
         <Label for="date">Date Added</Label>
-        <Input
-          required
-          onChange={handleFieldChange}
-          type="text"
-          name="date"
-          id="addDate"
+        <DatePicker
+            id="addDate"
+            selected={startDate}
           value={markedFLRead.addDate}
-          placeholder="06/17/2020"
-        />
+            onChange={date => setStartDate(date)}
+          />
       </FormGroup>
       <FormGroup>
         <Label for="readTypeId">Type of Reading Material</Label>

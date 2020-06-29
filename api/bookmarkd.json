@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "email": "a@b.com",
+      "email": "a@a.com",
       "username": "booknook",
       "password": "a",
       "confirmPassword": "a"
@@ -46,74 +46,70 @@
       "password": "meow",
       "confirmPassword": "meow",
       "id": 7
+    },
+    {
+      "email": "tammy@houchens.com",
+      "username": "tammie",
+      "password": "tam",
+      "confirmPassword": "tam",
+      "id": 8
     }
   ],
   "readingMaterials": [
     {
       "userId": 1,
       "id": 1,
-      "title": "Did you know I was a Barista?, the Zane Bliss Origin Story",
-      "authorName": "Zane Bliss",
+      "title": "Zane Bliss: In Defense of Black Coffee",
+      "authorName": "Zaniel Bliss",
       "readTypeId": "Blog",
       "statusId": "In-Progress",
       "addDate": "06/10/2020",
       "link": "zanebliss.org",
-      "notes": "This man enjoys black coffee and that's all I need to know."
+      "notes": "I've never met this man in my life."
     },
     {
       "userId": 1,
       "id": 2,
-      "title": "Pottery Wars: Unglazed",
+      "title": "When Pottery Gets Personal",
       "authorName": "Michelle McLane",
       "readTypeId": "Article",
       "statusId": "In-Progress",
       "addDate": "06/25/2020",
       "link": "www.nytimes.com",
-      "notes": "The story too hot for the kiln"
+      "notes": "Sometimes you gotta make like Usher...and let it burn."
     },
     {
       "userId": 1,
-      "title": "Luke and Leigha:...ENEMIES?",
+      "title": "Luke and Leigha: Breaking Our Silence",
       "authorName": "Cohort 40",
       "readTypeId": "Blog",
       "statusId": "Marked For Later",
-      "addDate": "06/21/2020",
-      "link": "tmz.com",
-      "notes": "Her actual brother's name is Luke",
+      "addDate": "06/27/2020",
+      "link": "facebook.com",
+      "notes": "'After this rumor was spread at a recent soft demo day we had to speak out' Weird...wonder who that could be about. Oh well!",
       "id": 3
     },
     {
       "userId": 1,
-      "title": "The Rise of Skywalker: except Ben Solo is the Skywalker and the movie isn't garbage",
-      "authorName": "Rian Johnson",
+      "title": "The Houchens Family Feud",
+      "authorName": "Adrian Garmendia",
       "readTypeId": "Fanfiction",
       "statusId": "Completed",
-      "addDate": "06/21/2020",
+      "addDate": "06/26/2020",
       "link": "https://archiveofourown.org/",
-      "notes": "Release the Rian Johnson cut and by cut I mean make an entirely new movie",
+      "notes": "Really enjoyed the scene in chapter four where we discover Ma Houchens backstory.",
       "id": 4
     },
     {
       "userId": 1,
-      "title": "Rey and Kylo adopt a Porg",
-      "authorName": "Rian Johnson",
-      "readTypeId": "Fanfiction",
-      "statusId": "Completed",
-      "addDate": "06/22/2020",
-      "link": "https://archiveofourown.org/",
-      "notes": "rated 5/5 porgs",
+      "title": "Felipe: Man of Mystery",
+      "authorName": "Oprah",
+      "readTypeId": "Article",
+      "statusId": "Marked For Later",
+      "addDate": "06/26/2020",
+      "link": "www.brazil.gov",
+      "notes": "This Felipe guy seems very interesting!",
       "id": 5
-    },
-    {
-      "userId": 1,
-      "title": "Roxanne's Cats: The E True Hollywood Story",
-      "authorName": "Roxanne",
-      "readTypeId": "Novel",
-      "statusId": "Completed",
-      "addDate": "06/25/2020",
-      "link": "www.amazon.com",
-      "notes": "A timeless yet scandalous classic ",
-      "id": 6
     }
   ],
   "readType": [

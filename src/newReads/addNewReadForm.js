@@ -1,39 +1,47 @@
 import React, { useState } from "react";
-import { Button, Form, FormGroup, Label, Input} from "reactstrap";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import ReadManager from "../modules/ReadManager";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const AddNewReadForm = props => {
-  const [read, setReads] = useState({ 
+  const [read, setReads] = useState({
     userId: parseInt(sessionStorage.getItem("credentials")),
     title: "",
     authorName: "",
     readTypeId: "",
-    statusId:"", 
+    statusId: "",
     addDate: "",
     link: "",
-    notes: ""});
+    notes: ""
+  });
   const [isLoading, setIsLoading] = useState(false);
+  const [startDate, setStartDate] = useState(new Date());
 
-//Handlefieldchange records the user input in the form, setReads function then inputs the updated read state object
+  //Handlefieldchange records the user input in the form, setReads function then inputs the updated read state object
   const handleFieldChange = evt => {
     const stateToChange = { ...read };
     stateToChange[evt.target.id] = evt.target.value;
     setReads(stateToChange);
   };
 
-
   const constructNewRead = evt => {
     evt.preventDefault();
-    if (read.title === "" || read.authorName === "" ||  read.readTypeId  === "" ||   read.statusId === "" || read.addDate === "" || read.link === "" || read.notes  === "") {
+    if (
+      read.title === "" ||
+      read.authorName === "" ||
+      read.readTypeId === "" ||
+      read.statusId === "" ||
+      read.addDate === "" ||
+      read.link === "" ||
+      read.notes === ""
+    ) {
       window.alert("Please complete all fields");
     } else {
       setIsLoading(true);
-      ReadManager.post(read)
-        .then(() => props.history.push("/Home"));
+      ReadManager.post(read).then(() => props.history.push("/Home"));
     }
   };
-
-
 
   return (
     <>
@@ -42,7 +50,7 @@ const AddNewReadForm = props => {
           <Label for="title">Title</Label>
           <Input
             required
-        onChange={handleFieldChange} 
+            onChange={handleFieldChange}
             type="text"
             name="title"
             id="title"
@@ -53,7 +61,7 @@ const AddNewReadForm = props => {
           <Label for="author">Author</Label>
           <Input
             required
-        onChange={handleFieldChange} 
+            onChange={handleFieldChange}
             type="text"
             name="author"
             id="authorName"
@@ -62,19 +70,21 @@ const AddNewReadForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="date">Date Added</Label>
-          <Input
-            required
-        onChange={handleFieldChange} 
-            type="text"
-            name="date"
+          <DatePicker
             id="addDate"
-            placeholder="06/17/2020"
+            selected={startDate}
+            onChange={date => setStartDate(date)}
           />
         </FormGroup>
         <FormGroup>
           <Label for="readTypeId">Type of Reading Material</Label>
-          <Input required
-        onChange={handleFieldChange} type="select" name="readTypeId" id="readTypeId">
+          <Input
+            required
+            onChange={handleFieldChange}
+            type="select"
+            name="readTypeId"
+            id="readTypeId"
+          >
             <option>Fanfiction</option>
             <option>Article</option>
             <option>Blog</option>
@@ -83,8 +93,13 @@ const AddNewReadForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="statusId">Status</Label>
-          <Input required
-        onChange={handleFieldChange} type="select" name="statusId" id="statusId">
+          <Input
+            required
+            onChange={handleFieldChange}
+            type="select"
+            name="statusId"
+            id="statusId"
+          >
             <option>In-Progress</option>
             <option>Completed</option>
             <option>Marked For Later</option>
@@ -94,7 +109,7 @@ const AddNewReadForm = props => {
           <Label for="link">Link</Label>
           <Input
             required
-        onChange={handleFieldChange} 
+            onChange={handleFieldChange}
             type="text"
             name="link"
             id="link"
@@ -103,15 +118,25 @@ const AddNewReadForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="notes">Notes</Label>
-          <Input required
-        onChange={handleFieldChange}  type="text" name="notes" id="notes" />
+          <Input
+            required
+            onChange={handleFieldChange}
+            type="text"
+            name="notes"
+            id="notes"
+          />
         </FormGroup>
-       
-        <Button disabled={isLoading} onClick={constructNewRead}outline color="primary">Submit</Button>{' '}
+        <Button
+          disabled={isLoading}
+          onClick={constructNewRead}
+          outline
+          color="primary"
+        >
+          Submit
+        </Button>{" "}
       </Form>
     </>
   );
-  };
-
+};
 
 export default AddNewReadForm;

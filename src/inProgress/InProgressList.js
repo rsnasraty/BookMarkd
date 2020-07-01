@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import UserManager from "../modules/UserManager";
 import ReadManager from "../modules/ReadManager"
 import InProgressCard from "./InProgressCard";
 
@@ -42,7 +41,7 @@ const InProgressList = props => {
         //key is for when u need to make multiples
         //these assignments get turned into key/value pairs on an object
           foo="hello"
-          // {} brackets asks code to evaluate js obj and return that value
+          // {} brackets asks code to evaluate js obj and return that
           key={readObject.id}
           readObject={readObject}
           deleteIPRead={deleteIPRead}

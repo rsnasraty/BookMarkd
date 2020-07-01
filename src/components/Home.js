@@ -1,19 +1,35 @@
-import React from "react";
 import { Card, CardBody, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import React, { useState } from "react";
+import { Tooltip } from "reactstrap";
 
 const Home = props => {
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+  const toggle = () => setTooltipOpen(!tooltipOpen);
+
   return (
     <div>
       <Container>
         <Row>
           <Card body outline color="info" className="home_cards">
             <Link to="addNewReadForm">
-              <img src="/images/notepad.svg" className="addNew" alt="Notepad" />
+              <img
+                src="/images/notepad.svg"
+                className="addNew"
+                alt="Notepad"
+                href="#"
+                id="TooltipExample"
+              />
             </Link>
-            <CardBody>
-            </CardBody>
+            <Tooltip
+              placement='top'
+              isOpen={tooltipOpen}
+              target="TooltipExample"
+              toggle={toggle}
+            >
+              Add A New Book
+            </Tooltip>
           </Card>
 
           {/*  /* //card 2// */}
@@ -24,10 +40,18 @@ const Home = props => {
                 max-width="50%"
                 className="inProgress"
                 alt="Open Book"
+                href="#"
+                id="TooltipExample2"
               />
             </Link>
-            <CardBody>
-            </CardBody>
+            <Tooltip
+              placement='top'
+              isOpen={tooltipOpen}
+              target="TooltipExample2"
+              toggle={toggle}
+            >
+              In Progress
+            </Tooltip>
           </Card>
         </Row>
 
@@ -41,10 +65,18 @@ const Home = props => {
                 max-width="50%"
                 className="MFLater"
                 alt="Book mark"
+                href="#"
+                id="TooltipExample3"
               />
             </Link>
-            <CardBody>
-            </CardBody>
+            <Tooltip
+              placement='bottom'
+              isOpen={tooltipOpen}
+              target="TooltipExample3"
+              toggle={toggle}
+            >
+              Marked For Later
+            </Tooltip>
           </Card>
 
           {/* //card 4 */}
@@ -55,10 +87,18 @@ const Home = props => {
                 max-width="50%"
                 className="Completed"
                 alt="Stack of books"
+                href="#"
+                id="TooltipExample4"
               />
             </Link>
-            <CardBody>
-            </CardBody>
+            <Tooltip
+              placement='bottom'
+              isOpen={tooltipOpen}
+              target="TooltipExample4"
+              toggle={toggle}
+            >
+              Completed
+            </Tooltip>
           </Card>
         </Row>
       </Container>

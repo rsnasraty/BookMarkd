@@ -28,7 +28,7 @@ const NavBar = (props) => {
      BookMark'd
       </h1>
       </header>
-      <Navbar align="right" color="info" light expand="md">
+      <Navbar align="right" color="info" dark expand="md">
         <NavbarBrand href="/"></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -43,7 +43,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/settings">Settings</NavLink>
+            <NavLink  href="/settings">Settings</NavLink>
             </NavItem>
             : null}
             {props.hasUser

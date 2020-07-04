@@ -1,4 +1,4 @@
-import { Card, CardBody, Container, Row } from "reactstrap";
+import { Card, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import React, { useState } from "react";
@@ -10,7 +10,7 @@ const Home = props => {
 
   return (
     <div>
-      <Container>
+      <Container className="home_card_container">
         <Row>
           <Card body outline color="info" className="home_cards">
             <Link to="addNewReadForm">
@@ -23,7 +23,7 @@ const Home = props => {
               />
             </Link>
             <Tooltip
-              placement='top'
+              placement="top"
               isOpen={tooltipOpen}
               target="TooltipExample"
               toggle={toggle}
@@ -45,7 +45,7 @@ const Home = props => {
               />
             </Link>
             <Tooltip
-              placement='top'
+              placement="top"
               isOpen={tooltipOpen}
               target="TooltipExample2"
               toggle={toggle}
@@ -70,7 +70,7 @@ const Home = props => {
               />
             </Link>
             <Tooltip
-              placement='bottom'
+              placement="bottom"
               isOpen={tooltipOpen}
               target="TooltipExample3"
               toggle={toggle}
@@ -92,7 +92,7 @@ const Home = props => {
               />
             </Link>
             <Tooltip
-              placement='bottom'
+              placement="bottom"
               isOpen={tooltipOpen}
               target="TooltipExample4"
               toggle={toggle}

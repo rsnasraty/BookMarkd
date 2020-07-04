@@ -4,6 +4,7 @@ import ReadManager from "../modules/ReadManager";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+
 const AddNewReadForm = props => {
   const [read, setReads] = useState({
     userId: parseInt(sessionStorage.getItem("credentials")),
@@ -24,6 +25,7 @@ const AddNewReadForm = props => {
     stateToChange[evt.target.id] = evt.target.value;
     setReads(stateToChange);
   };
+
 
   const constructNewRead = evt => {
     evt.preventDefault();

@@ -1,14 +1,27 @@
  .home_cards {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     margin-bottom: .02em;
     margin-right: .02em;
     margin-left: .02em;
     flex-basis: auto;
-    padding: .5em;
     height: 100%; 
     width: auto;
   }
    
+
+
+div .home_card_container {
+max-width: 400px;
+max-height: 200px;
+image-orientation: inherit;
+  }
+  
+
+div .background {
+  background-image: url("/src/lappelduvide.jpeg");
+  background-color: transparent;
+  max-width: 100%;
+  max-height: zero;
+}
+

@@ -7,11 +7,11 @@ import {
   Button,
   CardBody
 } from "reactstrap";
+import "./inProgressCard.css"
 
 const InProgressCard = (props) => {
-  console.log(props.foo)
   return (
-    <Card body outline color="info">
+    <Card body outline color="info" >
       <CardBody>
         <CardTitle tag="h2">{props.readObject.title}</CardTitle>
         <CardSubtitle>{props.readObject.authorName}</CardSubtitle>

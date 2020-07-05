@@ -1,3 +1,12 @@
-.site-title {
-    color: rgb(28, 165, 196)
+header {
+    color: rgb(62, 178, 204);
+    text-align: center;
 }
+
+.nav-link .link_text
+{ color: rgb(255, 255, 255) ; }
+
+.nav-link .link_text:hover 
+{ color: rgb(123, 232, 247) ; }
+
+ 

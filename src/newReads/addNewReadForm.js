@@ -38,8 +38,6 @@ const AddNewReadForm = props => {
       read.link === "" ||
       read.notes === ""
     ) {
-      window.alert("Please complete all fields");
-    } else {
       setIsLoading(true);
       ReadManager.post(read).then(() => props.history.push("/Home"));
     }
@@ -76,6 +74,7 @@ const AddNewReadForm = props => {
             id="addDate"
             selected={startDate}
             onChange={date => setStartDate(date)}
+            onChange={handleFieldChange}
           />
         </FormGroup>
         <FormGroup>

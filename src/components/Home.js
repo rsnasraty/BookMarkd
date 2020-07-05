@@ -9,6 +9,7 @@ const Home = props => {
   const toggle = () => setTooltipOpen(!tooltipOpen);
 
   return (
+    <div className="site_wrapper">
     <div className="home_img">
       <Container className="home_card_container">
         <Row>
@@ -102,6 +103,7 @@ const Home = props => {
           </Card>
         </Row>
       </Container>
+    </div>
     </div>
   );
 };

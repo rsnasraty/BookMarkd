@@ -22,7 +22,7 @@ const NavBar = (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
+    <div className="site_wrapper">
     <header>
      <h1 className="site-title">
      BookMark'd
@@ -83,6 +83,7 @@ const NavBar = (props) => {
         </Collapse>
       </Navbar>
     </div>
+    
     );
 };
 

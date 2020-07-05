@@ -9,7 +9,7 @@ const Home = props => {
   const toggle = () => setTooltipOpen(!tooltipOpen);
 
   return (
-    <div>
+    <div className="home_img">
       <Container className="home_card_container">
         <Row>
           <Card body outline color="info" className="home_cards">

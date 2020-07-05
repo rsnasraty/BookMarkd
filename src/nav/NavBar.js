@@ -17,9 +17,9 @@ const NavBar = (props) => {
     props.clearUser();
     props.history.push('/');
   }
-  const [isOpen, setIsOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
     <div>
@@ -28,56 +28,57 @@ const NavBar = (props) => {
      BookMark'd
       </h1>
       </header>
-      <Navbar align="right" color="info" dark expand="md">
-        <NavbarBrand href="/"></NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+      <Navbar color="info" light>
+        <NavbarBrand className="mr-auto" href="/">
+        </NavbarBrand>
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar align="right">
             {!props.hasUser
             //bang ternary statement states that if you DONT have a User then you will show them login. If you DO have a user, show "null" aka nothing
             ?
             <NavItem>
-            <NavLink href="/login">Login</NavLink>
+            <NavLink href="/login"><h6 className="link_text">Login</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink  href="/settings">Settings</NavLink>
+            <NavLink  href="/settings"><h6 className="link_text">Settings</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/home">Home</NavLink>
+            <NavLink href="/home"><h6 className="link_text">Home</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/addNewReadForm">Add a New Read</NavLink>
+            <NavLink href="/addNewReadForm"><h6 className="link_text">Add a New Book</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/markedForLaterList">Marked For Later</NavLink>
+            <NavLink href="/markedForLaterList"><h6 className="link_text">Mark for Later</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/inProgressList">In Progress</NavLink>
+            <NavLink href="/inProgressList"><h6 className="link_text">In Progress</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/completedList">Completed</NavLink>
+            <NavLink href="/completedList"><h6 className="link_text">Completed</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser 
-        ? <NavItem> <span className="nav-link" onClick={handleLogout}> Logout </span></NavItem> :null}
+        ? <NavItem> <span className="nav-link" onClick={handleLogout}><h6 className="link_text">Logout</h6></span></NavItem> :null}
           </Nav>
         </Collapse>
       </Navbar>

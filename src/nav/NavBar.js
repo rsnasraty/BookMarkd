@@ -8,7 +8,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Jumbotron,
+  Container
 } from 'reactstrap';
 
 // This is a Presentation Component. Directly expresses HTML.
@@ -22,11 +24,13 @@ const NavBar = (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div className="site_wrapper">
+    <div>
     <header>
-     <h1 className="site-title">
-     BookMark'd
-      </h1>
+      <Jumbotron fluid>
+        <Container fluid>
+          <h1 className="display-3">BookMark'd</h1>
+        </Container>
+      </Jumbotron>
       </header>
       <Navbar color="info" light>
         <NavbarBrand className="mr-auto" href="/">

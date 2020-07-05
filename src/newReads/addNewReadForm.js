@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import ReadManager from "../modules/ReadManager";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-
 
 const AddNewReadForm = props => {
   const [read, setReads] = useState({
@@ -17,7 +14,6 @@ const AddNewReadForm = props => {
     notes: ""
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
 
   //Handlefieldchange records the user input in the form, setReads function then inputs the updated read state object
   const handleFieldChange = evt => {
@@ -25,7 +21,6 @@ const AddNewReadForm = props => {
     stateToChange[evt.target.id] = evt.target.value;
     setReads(stateToChange);
   };
-
 
   const constructNewRead = evt => {
     evt.preventDefault();
@@ -38,6 +33,8 @@ const AddNewReadForm = props => {
       read.link === "" ||
       read.notes === ""
     ) {
+      window.alert("Please complete all fields");
+    } else {
       setIsLoading(true);
       ReadManager.post(read).then(() => props.history.push("/Home"));
     }
@@ -70,11 +67,12 @@ const AddNewReadForm = props => {
         </FormGroup>
         <FormGroup>
           <Label for="date">Date Added</Label>
-          <DatePicker
+          <Input 
+          required
+          onChange={handleFieldChange}
+          type="date"
             id="addDate"
-            selected={startDate}
-            onChange={date => setStartDate(date)}
-            onChange={handleFieldChange}
+            name="date"
           />
         </FormGroup>
         <FormGroup>

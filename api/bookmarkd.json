@@ -32,27 +32,6 @@
       "password": "hat",
       "confirmPassword": "hat",
       "id": 5
-    },
-    {
-      "email": "coffee@cup.com",
-      "username": "cup",
-      "password": "cup",
-      "confirmPassword": "cup",
-      "id": 6
-    },
-    {
-      "email": "meow@meowowowoow.com",
-      "username": "meow",
-      "password": "meow",
-      "confirmPassword": "meow",
-      "id": 7
-    },
-    {
-      "email": "tammy@houchens.com",
-      "username": "tammie",
-      "password": "tam",
-      "confirmPassword": "tam",
-      "id": 8
     }
   ],
   "readingMaterials": [
@@ -110,6 +89,18 @@
       "link": "www.brazil.gov",
       "notes": "This Felipe guy seems very interesting!",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "title": "Meow",
+      "authorName": "Meow",
+      "readTypeId": "Article",
+      "statusId": "Completed",
+      "addDate": "2020-07-05",
+      "link": "www.lol.com",
+      "notes": "Meow",
+      "file": "C:\\fakepath\\smeternaled.jpg",
+      "id": 6
     }
   ],
   "readType": [

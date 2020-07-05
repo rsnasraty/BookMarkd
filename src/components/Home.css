@@ -1,19 +1,33 @@
+div .home_card_container {
+  max-width: 1000px;
+  max-height: 500px;
+  
+  
+    }
+
 .home_cards {
   transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-  margin-bottom: .02em;
-  margin-right: .02em;
-  margin-left: .02em;
-  flex-basis: auto;
-  height: 100%; 
-  width: auto;
-   
+  border-radius: 5px; 
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-bottom: 2em;
+  flex: 0 1 24%;
   }
    
-
-div .home_card_container {
-max-width: 100%;
-max-height: 50%;
-
+  div .row {
+    height: 600px;
+    width: 1000px;
+    justify-content: space-evenly;
   }
 
+
+.card {
+  background-image: linear-gradient(to right, rgba(49, 7, 97, 0), rgba(181, 158, 201, 0.488));
+  color: rgba(191, 155, 223, 0.788);
+}
+
+h1 {
+  color: rgba(191, 155, 223, 0.788);
+}

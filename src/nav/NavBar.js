@@ -32,7 +32,7 @@ const NavBar = (props) => {
         </Container>
       </Jumbotron>
       </header>
-      <Navbar color="info" light>
+      <Navbar light>
         <NavbarBrand className="mr-auto" href="/">
         </NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
@@ -60,7 +60,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/addNewReadForm"><h6 className="link_text">Add a New Book</h6></NavLink>
+            <NavLink href="/newBook "><h6 className="link_text">Add a New Book</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser

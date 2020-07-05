@@ -14,7 +14,8 @@ const MarkedForLaterEdit = props => {
     statusId: "",
     addDate: "",
     link: "",
-    notes: ""
+    notes: "",
+    file: ""
   });
   const [isLoading, setIsLoading] = useState(false);
   const [startDate, setStartDate] = useState(new Date());

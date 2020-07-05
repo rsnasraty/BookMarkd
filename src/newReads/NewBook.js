@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import ReadManager from "../modules/ReadManager";
 
-const AddNewReadForm = props => {
+const NewBook = props => {
   const [read, setReads] = useState({
     userId: parseInt(sessionStorage.getItem("credentials")),
     title: "",
@@ -31,7 +31,7 @@ const AddNewReadForm = props => {
       read.statusId === "" ||
       read.addDate === "" ||
       read.link === "" ||
-      read.notes === ""
+      read.notes === "" 
     ) {
       window.alert("Please complete all fields");
     } else {
@@ -138,4 +138,4 @@ const AddNewReadForm = props => {
   );
 };
 
-export default AddNewReadForm;
+export default NewBook ;

@@ -1,4 +1,7 @@
-
+div .jumbotron {
+    background-color: rgba(233, 253, 255, 0.781);
+    
+  }
 
 .nav-link .link_text
 { color: rgb(255, 255, 255) ; }
@@ -6,3 +9,13 @@
 .nav-link .link_text:hover 
 { color: rgb(123, 232, 247) ; }
 
+div .navbar {
+    padding-bottom: 20px;
+    flex-basis: auto;
+}
+
+
+header .jumbotron-fluid {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}

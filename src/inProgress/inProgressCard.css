@@ -1,8 +1,13 @@
-.site_container {
-    max-height: 100%;
-    max-width: zero;
+.card {
+    background-image: linear-gradient(to right, rgba(53, 142, 142, 0), rgba(198, 241, 245, 0.488));
+    color: #0099CC;
+    max-width: 100%;
+    max-height: zero;
 }
 
-Card .IpCard {
-    background-color: pink;
+.body
+
+{
+    background-image: linear-gradient(to right, rgba(53, 142, 142, 0), rgba(198, 241, 245, 0.488));
+   
 }

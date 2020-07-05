@@ -8,6 +8,8 @@ import {
   Button
 } from "reactstrap";
 
+import "./MarkedForLater.css"
+
 const MarkedForLaterCard = props => {
   return (
     <Card body outline color="info">

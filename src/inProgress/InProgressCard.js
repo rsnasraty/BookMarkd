@@ -11,6 +11,7 @@ import "./inProgressCard.css"
 
 const InProgressCard = (props) => {
   return (
+    <div className=".IpCard">
     <Card body outline color="info" >
       <CardBody>
         <CardTitle tag="h2">{props.readObject.title}</CardTitle>
@@ -38,6 +39,7 @@ const InProgressCard = (props) => {
         {""}
       </CardBody>
     </Card>
+    </div>
   );
 };
 

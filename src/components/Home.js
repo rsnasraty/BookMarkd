@@ -19,7 +19,7 @@ const Home = props => {
   const toggle = () => setTooltipOpen(!tooltipOpen);
 
   return (
-    <div className="site_wrapper">
+    <div>
       <div className="home_img">
         <CardDeck>
           <Container className="home_card_container">
@@ -64,7 +64,7 @@ const Home = props => {
               <CardHeader><h5>Marked for Later</h5></CardHeader>
                 <Link to="markedForLaterList">
                   <CardImg
-                    src="/images/letdai12.jpg"
+                    src="/images/letdai10.jpg"
                     className="MFLater"
                     alt="Book mark"
                     href="#"

@@ -1,5 +1,3 @@
-
-
 div .card-header {
   max-width: auto;
   max-height: 40px;
@@ -8,22 +6,19 @@ div .card-header {
 div .card-columns {
     column-count: 4;
     column-gap: .50rem;
-  display: flex;
-  flex-direction: row wrap
+    display: flex;
+    flex-direction: row wrap;
 }
     
 
 div .home_cards {
   transition: 0.5s;
-  border-radius: 2px; 
+  border-radius: 12px; 
   margin-top: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin-bottom: 2em;
   }
    
-  div .home_cards .card-img {
-    max-width: 100%;
-  }
 
 .card {
   background-color: rgba(181, 158, 201, 0.488);
@@ -35,11 +30,7 @@ h1 {
   color: rgba(191, 155, 223, 0.788);
 }
 
-div .card-img {
- max-width: 1000px;
-}
-
-img 
-{
-  max-width: fit-content;
+div .home_card_container  {
+ max-width: 100%;
+ max-height: auto;
 }

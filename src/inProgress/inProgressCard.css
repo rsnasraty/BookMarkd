@@ -6,5 +6,9 @@ div .Ipcard
 }
 
 div button.delete.btn-secondary{
-    background-color: rgb(219, 96, 243);
+    background-color: rgb(242, 157, 215);
+}
+
+div button.edit.btn-secondary{
+    background-color: rgb(186, 158, 252);
 }

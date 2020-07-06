@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade');
 
-div .home_img {
-  color:rgb(255, 255, 255);
-  align-content: center;
-  max-width: 1000px;
-  max-height: 2000px;
-  
-}
+
+
+
 
 header  {
   background-image: linear-gradient(to right, rgba(49, 7, 97, 0), rgba(181, 158, 201, 0.488));
   text-align: center;
 }
+
 
 
 body,
@@ -23,7 +20,7 @@ textarea {
   line-height: 1.5;
   font-family: 'Scheherazade', serif;
   font-size: 14px;
-  
+  padding: 0%;
   }
 
   body 

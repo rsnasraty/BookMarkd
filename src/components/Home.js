@@ -4,8 +4,10 @@ import {
   CardColumns,
   CardDeck,
   CardTitle,
+  CardSubtitle,
   CardText,
-  CardImg
+  CardImg,
+  CardHeader
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -23,6 +25,7 @@ const Home = props => {
           <Container className="home_card_container">
             <CardColumns>
               <Card className="home_cards">
+              <CardHeader><h5>Add New</h5></CardHeader>
                 <Link to="newBook ">
                   <CardImg
                     src="/images/lappelduvide.jpeg"
@@ -32,24 +35,16 @@ const Home = props => {
                     id="TooltipExample"
                   />
                 </Link>
-                <CardTitle>Card title</CardTitle>
+                <CardTitle>L'Appel Du Vide</CardTitle>
+                <CardSubtitle>Persona 5 Fanfiction by Xov</CardSubtitle>
                 <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Art by TaiguCafe
                 </CardText>
-                <Tooltip
-                  placement="top"
-                  isOpen={tooltipOpen}
-                  target="TooltipExample"
-                  toggle={toggle}
-                >
-                  Add A New Book
-                </Tooltip>
               </Card>
 
               {/*  /* //card 2// */}
               <Card className="home_cards">
+              <CardHeader><h5>In-Progress</h5></CardHeader>
                 <Link to="inProgressList">
                   <CardImg
                     src="/images/smeternaled.jpg"
@@ -59,40 +54,25 @@ const Home = props => {
                     id="TooltipExample2"
                   />
                 </Link>
-                <CardTitle>Card title</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
-                <Tooltip
-                  placement="top"
-                  isOpen={tooltipOpen}
-                  target="TooltipExample2"
-                  toggle={toggle}
-                >
-                  In Progress
-                </Tooltip>
+                <CardTitle>Sailor Moon</CardTitle>
+                <CardSubtitle>Naoko Takeuchi</CardSubtitle>
               </Card>
 
               {/* //card 3 */}
 
               <Card className="home_cards">
+              <CardHeader><h5>Marked for Later</h5></CardHeader>
                 <Link to="markedForLaterList">
                   <CardImg
-                    src="/images/bookmark.svg"
+                    src="/images/letdai12.jpg"
                     className="MFLater"
                     alt="Book mark"
                     href="#"
                     id="TooltipExample3"
                   />
                 </Link>
-                <CardTitle>Card title</CardTitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </CardText>
+                <CardTitle>Let Dai</CardTitle>
+                <CardSubtitle>Won Soo-yeon </CardSubtitle>
                 <Tooltip
                   placement="top"
                   isOpen={tooltipOpen}
@@ -105,29 +85,20 @@ const Home = props => {
 
               {/* //card 4 */}
               <Card className="home_cards">
+              <CardHeader><h5>Completed</h5></CardHeader>
                 <Link to="completedList">
                   <CardImg
-                    src="/images/bookblue.svg"
+                    src="/images/elithien.jpg"
                     className="Completed"
                     alt="Stack of books"
                     href="#"
                     id="TooltipExample4"
                   />
                 </Link>
-                <CardTitle>Card title</CardTitle>
+                <CardTitle>Rey and Kylo</CardTitle>
                 <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Art by Elithien
                 </CardText>
-                <Tooltip
-                  placement="top"
-                  isOpen={tooltipOpen}
-                  target="TooltipExample4"
-                  toggle={toggle}
-                >
-                  Completed
-                </Tooltip>
               </Card>
             </CardColumns>
           </Container>

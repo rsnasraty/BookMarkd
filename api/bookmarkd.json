@@ -32,6 +32,13 @@
       "password": "hat",
       "confirmPassword": "hat",
       "id": 5
+    },
+    {
+      "email": "cocoa@melly.com",
+      "username": "cocoa",
+      "password": "cocoa",
+      "confirmPassword": "cocoa",
+      "id": 6
     }
   ],
   "readingMaterials": [
@@ -89,17 +96,6 @@
       "link": "www.brazil.gov",
       "notes": "This Felipe guy seems very interesting!",
       "id": 5
-    },
-    {
-      "userId": 1,
-      "title": "Meow",
-      "authorName": "Meow",
-      "readTypeId": "Article",
-      "statusId": "Completed",
-      "addDate": "2020-07-05",
-      "link": "www.lol.com",
-      "notes": "Meow",
-      "id": 6
     }
   ],
   "readType": [

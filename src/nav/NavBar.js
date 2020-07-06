@@ -29,7 +29,7 @@ const NavBar = (props) => {
       <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">
-        BookMark<img width="60px" align="justify" src="/images/bookmark.png"></img>d</h1>
+        BookMark<img alt="bookmark logo" width="60px" align="justify" src="/images/bookmark.png"></img>d</h1>
         </Container>
       </Jumbotron>
       </header>
@@ -61,7 +61,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/newReads"><h6 className="link_text">Add a New Book</h6></NavLink>
+            <NavLink href="/newBook "><h6 className="link_text">Add a New Book</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser

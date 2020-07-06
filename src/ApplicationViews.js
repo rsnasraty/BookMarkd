@@ -4,7 +4,7 @@ import React from "react";
 import Home from "./components/Home";
 import RegisterCard from "./auth/RegisterCard";
 import Settings from "./auth/Settings"
-import NewBook from "./newReads/NewBook"
+import NewBook from "./newBook/NewBook"
 import InProgressList from "./inProgress/InProgressList";
 import InProgressEdit from "./inProgress/InProgressEdit";
 import MarkedForLaterList from "./markedForLater/MarkedForLaterList";
@@ -87,7 +87,7 @@ const ApplicationViews = props => {
 
       <Route
         exact
-        path="/NewBook "
+        path="/newBook "
         render={props => {
           if (hasUser) {
             return <NewBook  {...props} />;

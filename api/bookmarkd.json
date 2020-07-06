@@ -12,6 +12,13 @@
       "email": "the@read.com",
       "username": "crissle",
       "password": "kf"
+    },
+    {
+      "email": "m@m.com",
+      "username": "m",
+      "password": "m",
+      "confirmPassword": "m",
+      "id": 3
     }
   ],
   "readingMaterials": [

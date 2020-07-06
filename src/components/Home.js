@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import React, { useState } from "react";
+import React from "react";
 
 const Home = props => {
 

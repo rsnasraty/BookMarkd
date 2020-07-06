@@ -25,7 +25,7 @@ const Settings = props => {
     setIsLoading(true);
 
     UserManager.updateUser(editedUser).then(() =>
-      props.history.push("/settings")
+      props.history.push("/home")
     );
   };
 

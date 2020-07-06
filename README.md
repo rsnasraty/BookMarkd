@@ -18,24 +18,24 @@ git clone hhttps://github.com/rsnasraty/BookMarkd
 
 ### Getting Started
 
-```
-1. Register as a new user
-2. Once registered, sign in and add a new book 
 
 ![Image of Home Page](public/images/Home.png)
 
 
+```
+1. Register as a new user
+2. Once registered, sign in and add a new book 
 3. Go to the home page and you will be able to select the "Completed/In-Progress/Marked for Later" sections 
 4. Users are able to edit their user info by selecting "Settings"
 ```
 
 ## Built With
 
-* [React](https://githstrapped with Create React App
+* [React](https://github.com/facebook/create-react-app) - bootstrapped with Create React App
 * [Reactstrap](https://reactstrap.github.io/) - Styled with Reactstrap
 
 
 ## Acknowledgments
 
-* ReadMe Template from https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+* [ReadMe Template] from (https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 

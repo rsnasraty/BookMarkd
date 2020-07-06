@@ -60,7 +60,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/newBook "><h6 className="link_text">Add a New Book</h6></NavLink>
+            <NavLink href="/newBook"><h6 className="link_text">Add a New Book</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser

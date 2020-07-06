@@ -3,7 +3,7 @@
     {
       "id": 1,
       "email": "a@a.com",
-      "username": "booknook",
+      "username": "book",
       "password": "a",
       "confirmPassword": "a"
     },
@@ -12,67 +12,40 @@
       "email": "the@read.com",
       "username": "crissle",
       "password": "kf"
-    },
-    {
-      "email": "cat@cat.com",
-      "username": "cat",
-      "password": "cat",
-      "id": 3
-    },
-    {
-      "email": "meow@cat.com",
-      "username": "meow",
-      "password": "meow",
-      "confirmPassword": "meow",
-      "id": 4
-    },
-    {
-      "email": "cat@hat.com",
-      "username": "hat",
-      "password": "hat",
-      "confirmPassword": "hat",
-      "id": 5
-    },
-    {
-      "email": "cocoa@melly.com",
-      "username": "cocoa",
-      "password": "cocoa",
-      "confirmPassword": "cocoa",
-      "id": 6
     }
   ],
   "readingMaterials": [
     {
       "userId": 1,
       "id": 1,
-      "title": "Zane Bliss: In Defense of Black Coffee",
-      "authorName": "Zaniel Bliss",
-      "readTypeId": "Blog",
-      "statusId": "In-Progress",
+      "title": "Science is a Liar (Sometimes)",
+      "authorName": "Ronald 'Mac' McDonald",
+      "readTypeId": "Article",
+      "statusId": "Completed",
       "addDate": "06/10/2020",
-      "link": "zanebliss.org",
-      "notes": "I've never met this man in my life."
+      "link": "www.fightmilk.com",
+      "notes": "A compelling argument"
     },
     {
       "userId": 1,
       "id": 2,
-      "title": "When Pottery Gets Personal",
+      "title": "Glaze Days",
       "authorName": "Michelle McLane",
-      "readTypeId": "Article",
-      "statusId": "In-Progress",
+      "readTypeId": "Blog",
+      "statusId": "Completed",
       "addDate": "06/25/2020",
       "link": "www.nytimes.com",
       "notes": "Sometimes you gotta make like Usher...and let it burn."
     },
     {
       "userId": 1,
-      "title": "Luke and Leigha: Breaking Our Silence",
+      "title": "The D.E.N.N.I.S system ",
       "authorName": "Cohort 40",
       "readTypeId": "Blog",
       "statusId": "Marked For Later",
       "addDate": "06/27/2020",
-      "link": "facebook.com",
-      "notes": "'After this rumor was spread at a recent soft demo day we had to speak out' Weird...wonder who that could be about. Oh well!",
+      "link": "www.goldengod.com",
+      "notes": "He's a five star man.",
       "id": 3
     },
     {
@@ -80,7 +53,7 @@
       "title": "The Houchens Family Feud",
       "authorName": "Adrian Garmendia",
       "readTypeId": "Fanfiction",
-      "statusId": "Completed",
+      "statusId": "Marked For Later",
       "addDate": "06/26/2020",
       "link": "https://archiveofourown.org/",
       "notes": "Really enjoyed the scene in chapter four where we discover Ma Houchens backstory.",
@@ -88,13 +61,13 @@
     },
     {
       "userId": 1,
-      "title": "Felipe: Man of Mystery",
-      "authorName": "Oprah",
-      "readTypeId": "Article",
-      "statusId": "Marked For Later",
+      "title": "L'Appel du Vide, a Persona 5 Fanfiction",
+      "authorName": "XoV",
+      "readTypeId": "Fanfiction",
+      "statusId": "In-Progress",
       "addDate": "06/26/2020",
-      "link": "www.brazil.gov",
-      "notes": "This Felipe guy seems very interesting!",
+      "link": "www.ao3.org",
+      "notes": "Best Fanfiction of all time",
       "id": 5
     }
   ],

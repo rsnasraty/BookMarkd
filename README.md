@@ -37,5 +37,5 @@ git clone hhttps://github.com/rsnasraty/BookMarkd
 
 ## Acknowledgments
 
-* [ReadMe Template] from (https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* [ReadMe Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 

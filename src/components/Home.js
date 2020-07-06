@@ -31,7 +31,6 @@ const Home = props => {
                     className="addNew"
                     alt="Notepad"
                     href="#"
-                    id="TooltipExample"
                   />
                 </Link>
                 <CardTitle>L'Appel Du Vide</CardTitle>
@@ -50,7 +49,6 @@ const Home = props => {
                     className="inProgress"
                     alt="Open Book"
                     href="#"
-                    id="TooltipExample2"
                   />
                 </Link>
                 <CardTitle>Sailor Moon</CardTitle>
@@ -69,7 +67,6 @@ const Home = props => {
                     className="MFLater"
                     alt="Book mark"
                     href="#"
-                    id="TooltipExample3"
                   />
                 </Link>
                 <CardTitle>Let Dai</CardTitle>
@@ -87,7 +84,6 @@ const Home = props => {
                     className="Completed"
                     alt="Stack of books"
                     href="#"
-                    id="TooltipExample4"
                   />
                 </Link>
                 <CardTitle>Darkness, Take My Hand</CardTitle>

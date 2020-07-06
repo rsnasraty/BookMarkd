@@ -17,6 +17,7 @@ div .home_cards {
   margin-top: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin-bottom: 2em;
+  text-align: center;
   }
    
 
@@ -24,10 +25,12 @@ div .home_cards {
   background-color: rgba(181, 158, 201, 0.488);
   color: rgba(191, 155, 223, 0.788);
   position: absolute;
+  
 }
 
 h1 {
   color: rgba(191, 155, 223, 0.788);
+  
 }
 
 div .home_card_container  {

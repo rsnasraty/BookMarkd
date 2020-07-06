@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 import "./NavBar.css";
 import {
   Collapse,
@@ -28,7 +28,8 @@ const NavBar = (props) => {
     <header>
       <Jumbotron fluid>
         <Container fluid>
-          <h1 className="display-3">BookMark'd</h1>
+          <h1 className="display-3">
+        BookMark<img width="60px" align="justify" src="/images/bookmark.png"></img>d</h1>
         </Container>
       </Jumbotron>
       </header>
@@ -48,7 +49,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink  href="/settings"><h6 className="link_text">Settings</h6></NavLink>
+            <NavLink href="/settings"><h6 className="link_text">Settings</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser
@@ -60,7 +61,7 @@ const NavBar = (props) => {
             {props.hasUser
             ?
             <NavItem>
-            <NavLink href="/newBook "><h6 className="link_text">Add a New Book</h6></NavLink>
+            <NavLink href="/newReads"><h6 className="link_text">Add a New Book</h6></NavLink>
             </NavItem>
             : null}
             {props.hasUser

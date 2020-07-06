@@ -1,21 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade');
 
-div .home_img {
-  color: #d6fcff;
-  color:#0099CC;
-  align-content: center;
-  max-width: 80%;
-  max-height: zero;
-  padding-left: 200px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  
-}
+
+
+
 
 header  {
-  color: #0099CC;
+  background-image: linear-gradient(to right, rgba(49, 7, 97, 0), rgba(181, 158, 201, 0.488));
   text-align: center;
 }
+
 
 
 body,
@@ -23,11 +16,11 @@ button,
 input,
 select,
 textarea {
-  color: #0099CC;
+  color: rgb(208, 137, 230);
   line-height: 1.5;
   font-family: 'Scheherazade', serif;
   font-size: 14px;
-  
+  padding: 0%;
   }
 
   body 

@@ -12,7 +12,7 @@ import "./inProgressCard.css"
 const InProgressCard = (props) => {
   return (
     <div className=".IpCard">
-    <Card body outline color="info" >
+    <Card >
       <CardBody>
         <CardTitle tag="h2">{props.readObject.title}</CardTitle>
         <CardSubtitle>{props.readObject.authorName}</CardSubtitle>
@@ -21,14 +21,14 @@ const InProgressCard = (props) => {
         <CardText>{props.readObject.link}</CardText>
         <CardText tag="h4">{props.readObject.notes}</CardText>
         <Button
-          color="info"
+          className="delete"
           type="button"
           onClick={() => props.deleteIPRead(props.readObject.id)}
         >
           Delete
         </Button>{" "}
         <Button
-          color="success"
+          className="edit"
           type="button"
           onClick={() =>
             props.history.push(`/InProgressList/${props.readObject.id}/edit`)

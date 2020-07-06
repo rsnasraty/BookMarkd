@@ -12,7 +12,7 @@ import "./MarkedForLater.css"
 
 const MarkedForLaterCard = props => {
   return (
-    <Card body outline color="info">
+    <Card >
       <CardBody>
         <CardTitle tag="h2">{props.readObject.title}</CardTitle>
         <CardSubtitle>{props.readObject.authorName}</CardSubtitle>
@@ -21,14 +21,14 @@ const MarkedForLaterCard = props => {
         <CardText>{props.readObject.link}</CardText>
         <CardText tag="h4">{props.readObject.notes}</CardText>
         <Button
-          color="info"
+          className="delete"
           type="button"
           onClick={() => props.deleteMFLRead(props.readObject.id)}
         >
           Delete
         </Button>{" "}
         <Button
-          color="success"
+          className="edit"
           type="button"
           onClick={() =>
             props.history.push(

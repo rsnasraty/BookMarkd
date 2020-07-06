@@ -1,21 +1,33 @@
 div .jumbotron {
-    background-color: rgba(233, 253, 255, 0.781);
-    
+    background-image: linear-gradient(to right, rgba(49, 7, 97, 0), rgba(181, 158, 201, 0.488));
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
   }
 
-.nav-link .link_text
-{ color: rgb(255, 255, 255) ; }
+.nav-link .link_text { 
+    color: rgba(191, 155, 223, 0.788);
+    cursor: pointer;
+
+}
 
 .nav-link .link_text:hover 
-{ color: rgb(123, 232, 247) ; }
+{ color: rgba(99, 38, 153, 0.788); }
 
 div .navbar {
     padding-bottom: 20px;
     flex-basis: auto;
+    background-image: linear-gradient(to right, rgba(236, 223, 249, 0.596), rgba(242, 235, 245, 0.596));
 }
 
 
 header .jumbotron-fluid {
     margin-bottom: 0px;
     margin-top: 0px;
+}
+
+header .container-fluid {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background-image: linear-gradient(to right, rgba(236, 223, 249, 0.808), rgba(242, 235, 245, 0.938));
 }

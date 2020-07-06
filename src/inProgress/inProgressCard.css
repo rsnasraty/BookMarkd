@@ -1,13 +1,14 @@
-.card {
-    background-image: linear-gradient(to right, rgba(53, 142, 142, 0), rgba(198, 241, 245, 0.488));
-    color: #0099CC;
-    max-width: 100%;
-    max-height: zero;
-}
-
-.body
+div .Ipcard
 
 {
     background-image: linear-gradient(to right, rgba(53, 142, 142, 0), rgba(198, 241, 245, 0.488));
    
+}
+
+div button.delete.btn-secondary{
+    background-color: rgb(242, 157, 215);
+}
+
+div button.edit.btn-secondary{
+    background-color: rgb(186, 158, 252);
 }

@@ -12,11 +12,8 @@ import {
 import { Link } from "react-router-dom";
 import "./Home.css";
 import React, { useState } from "react";
-import { Tooltip } from "reactstrap";
 
 const Home = props => {
-  const [tooltipOpen, setTooltipOpen] = useState(false);
-  const toggle = () => setTooltipOpen(!tooltipOpen);
 
   return (
     <div>
@@ -25,7 +22,9 @@ const Home = props => {
           <Container className="home_card_container">
             <CardColumns>
               <Card className="home_cards">
-              <CardHeader><h5>Add New</h5></CardHeader>
+                <CardHeader>
+                  <h5>Add New</h5>
+                </CardHeader>
                 <Link to="newBook ">
                   <CardImg
                     src="/images/lappelduvide.jpeg"
@@ -37,14 +36,14 @@ const Home = props => {
                 </Link>
                 <CardTitle>L'Appel Du Vide</CardTitle>
                 <CardSubtitle>Persona 5 Fanfiction by Xov</CardSubtitle>
-                <CardText>
-                  Art by TaiguCafe
-                </CardText>
+                <CardText>Art by TaiguCafe</CardText>
               </Card>
 
               {/*  /* //card 2// */}
               <Card className="home_cards">
-              <CardHeader><h5>In-Progress</h5></CardHeader>
+                <CardHeader>
+                  <h5>In-Progress</h5>
+                </CardHeader>
                 <Link to="inProgressList">
                   <CardImg
                     src="/images/smeternaled.jpg"
@@ -61,7 +60,9 @@ const Home = props => {
               {/* //card 3 */}
 
               <Card className="home_cards">
-              <CardHeader><h5>Marked for Later</h5></CardHeader>
+                <CardHeader>
+                  <h5>Marked for Later</h5>
+                </CardHeader>
                 <Link to="markedForLaterList">
                   <CardImg
                     src="/images/letdai10.jpg"
@@ -73,19 +74,13 @@ const Home = props => {
                 </Link>
                 <CardTitle>Let Dai</CardTitle>
                 <CardSubtitle>Won Soo-yeon </CardSubtitle>
-                <Tooltip
-                  placement="top"
-                  isOpen={tooltipOpen}
-                  target="TooltipExample3"
-                  toggle={toggle}
-                >
-                  Marked For Later
-                </Tooltip>
               </Card>
 
               {/* //card 4 */}
               <Card className="home_cards">
-              <CardHeader><h5>Completed</h5></CardHeader>
+                <CardHeader>
+                  <h5>Completed</h5>
+                </CardHeader>
                 <Link to="completedList">
                   <CardImg
                     src="/images/elithien.jpg"
@@ -95,10 +90,12 @@ const Home = props => {
                     id="TooltipExample4"
                   />
                 </Link>
-                <CardTitle>Rey and Kylo</CardTitle>
-                <CardText>
-                  Art by Elithien
-                </CardText>
+                <CardTitle>Darkness, Take My Hand</CardTitle>
+                <CardSubtitle>
+                  {" "}
+                  Star Wars Fanfiction by kathyswizards
+                </CardSubtitle>
+                <CardText> Art by Elithien</CardText>
               </Card>
             </CardColumns>
           </Container>

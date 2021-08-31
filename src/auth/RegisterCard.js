@@ -44,6 +44,7 @@ const RegisterCard = props => {
             name="email"
             id="email"
             placeholder="mark@book.com"
+            autoComplete="off"
           />
         </FormGroup>
 
@@ -55,6 +56,7 @@ const RegisterCard = props => {
             onChange={handleFieldChange}
             name="username"
             id="username"
+            autoComplete="off"
             placeholder="readingrainbow"
           />
         </FormGroup>

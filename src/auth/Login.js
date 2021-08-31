@@ -65,6 +65,7 @@ const Login = props => {
             type="email"
             name="email"
             id="email"
+            autoComplete="off"
             placeholder="mark@book.com"
           />
         </FormGroup>
@@ -75,6 +76,7 @@ const Login = props => {
             type="password"
             name="password"
             id="password"
+            autoComplete="off"
             placeholder="password"
           />
         </FormGroup>
